@@ -6,6 +6,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -32,12 +33,12 @@ public class MusicPlayerActivity extends AppCompatActivity
         //                           BUTTONS
         //=================================================================
 
-        ImageButton btnBack = findViewById(R.id.musicBtn_Back);
-        ImageButton btnStop = findViewById(R.id.musicBtn_Stop);
+        Button btnBack = findViewById(R.id.musicBtn_Back);
+        Button btnStop = findViewById(R.id.musicBtn_Stop);
         ImageButton btnRepeat = findViewById(R.id.musicBtn_Repeat);
 
-        ImageButton btnMainTheme = findViewById(R.id.musicBtn_MainTheme);
-        ImageButton btnTheCoreDespositoryTheme = findViewById(R.id.musicBtn_TCDT);
+        Button btnMainTheme = findViewById(R.id.musicBtn_MainTheme);
+        Button btnTheCoreDespositoryTheme = findViewById(R.id.musicBtn_TCDT);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -38,9 +39,9 @@ public class MainActivity extends AppCompatActivity
         //                           BUTTONS
         //=================================================================
 
-        ImageButton btnPlay = findViewById(R.id.btnPlay);
-        ImageButton btnMusicPlayer = findViewById(R.id.btnMusicPlayer);
-        ImageButton btnCredits = findViewById(R.id.btnCredits);
+        Button btnPlay = findViewById(R.id.btnPlay);
+        Button btnMusicPlayer = findViewById(R.id.btnMusicPlayer);
+        Button btnCredits = findViewById(R.id.btnCredits);
         ImageButton btnSetting = findViewById(R.id.btnSettings);
 
         btnPlay.setOnClickListener(new View.OnClickListener() {

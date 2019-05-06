@@ -73,37 +73,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btnPlay"
         android:layout_width="314dp"
         android:layout_height="53dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/ic_play_btn"
+        android:background="@drawable/ic_button"
         android:scaleType="fitXY"
+        android:text="Play"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btnMusicPlayer"
         android:layout_width="314dp"
         android:layout_height="53dp"
         android:layout_marginTop="72dp"
-        android:background="@drawable/ic_musicplayer"
+        android:background="@drawable/ic_button"
         android:scaleType="fitXY"
+        android:text="Music Player"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlay" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btnCredits"
         android:layout_width="314dp"
         android:layout_height="53dp"
         android:layout_marginTop="72dp"
-        android:background="@drawable/ic_credits_btn"
+        android:background="@drawable/ic_button"
         android:scaleType="fitXY"
+        android:text="Credits"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMusicPlayer" />
