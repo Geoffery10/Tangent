@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Starts Game
-                Toast.makeText(MainActivity.this, "Play Under Development", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(getApplicationContext(), GameActivity.class);
+                musicPlayer.stopPlaying();
+                startActivity(in);
             }
         });
 

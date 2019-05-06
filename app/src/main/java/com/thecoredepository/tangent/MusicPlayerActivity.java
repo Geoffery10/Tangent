@@ -77,6 +77,10 @@ public class MusicPlayerActivity extends AppCompatActivity
             }
         });
 
+        //=================================================================
+        //                         BUTTONS END
+        //=================================================================
+
         startAnimation();
     }
 
