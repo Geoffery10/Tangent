@@ -3,4 +3,13 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Testers">
+        Geoffery Powell\n
+        Connor Davey\n
+        Peter Gritchnik\n
+        Isaac Swiney\n
+        Leticia Bounds\n
+        Devin Escue\n
+        Elizabeth Saery
+    </string>
 </resources>
