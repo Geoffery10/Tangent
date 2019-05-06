@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
@@ -15,6 +16,8 @@ import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 public class GameActivity extends AppCompatActivity
 {
     MusicPlayer musicPlayer = new MusicPlayer();
+    AnimationDrawable animForground;
+    AnimationDrawable animBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,21 @@ public class GameActivity extends AppCompatActivity
         //                         BUTTONS END
         //=================================================================
 
+        startAnimations();
+    }
+
+    private void startAnimations()
+    {
+        //Forground Animation
+        ImageView imgForground = (ImageView) findViewById(R.id.imgForground);
+        imgForground.setBackgroundResource(R.drawable.spaceship_animation);
+        animForground = (AnimationDrawable) imgForground.getBackground();
+        animForground.start();
+        //Background Animation
+        //ImageView spaceship = (ImageView) findViewById(R.id.imgBackground);
+        //spaceship.setBackgroundResource(R.drawable.spaceship_animation);
+        //animBackground = (AnimationDrawable) spaceship.getBackground();
+        //animBackground.start();
     }
 
     //=====================================================================
