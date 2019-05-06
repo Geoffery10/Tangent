@@ -28,6 +28,7 @@ public class CreditsActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(), MainActivity.class);
+                //stopPlaying();
                 startActivity(in);
             }
         });
@@ -87,12 +88,11 @@ public class CreditsActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            startPlaying(R.raw.cyoa01smallfinal, true, false);
-            startPlaying(R.raw.rocket_thrusters, true, true);
+            //startPlaying(R.raw.intro, false, false);
         }
         else
         {
-            stopPlaying();
+            //stopPlaying();
         }
     }
 

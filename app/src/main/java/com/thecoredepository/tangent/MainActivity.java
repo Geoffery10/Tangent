@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
         //                           BUTTONS
         //=================================================================
 
-        ImageButton btnPlay = findViewById(R.id.btnCredits);
+        ImageButton btnPlay = findViewById(R.id.btnPlay);
         ImageButton btnCredits = findViewById(R.id.btnCredits);
         ImageButton btnSetting = findViewById(R.id.btnBack);
 
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 //Open Credits
                 Intent in = new Intent(getApplicationContext(), CreditsActivity.class);
+                stopPlaying();
                 startActivity(in);
             }
         });
