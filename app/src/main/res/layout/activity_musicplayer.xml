@@ -12,6 +12,21 @@
     android:gravity="center">
 
     <ImageButton
+        android:id="@+id/musicBtn_Repeat"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:foregroundGravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_music_repeat_one"
+        app:layout_constraintBottom_toTopOf="@+id/musicBtn_Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/musicScroll" />
+
+    <ImageButton
         android:id="@+id/musicBtn_Back"
         android:layout_width="314dp"
         android:layout_height="53dp"
@@ -26,21 +41,23 @@
         android:id="@+id/musicBtn_Stop"
         android:layout_width="314dp"
         android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/ic_stop"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/musicBtn_Back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/musicBtn_Repeat" />
 
     <ScrollView
         android:id="@+id/musicScroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
         android:scrollbarStyle="insideInset"
-        app:layout_constraintBottom_toTopOf="@+id/musicBtn_Stop"
+        app:layout_constraintBottom_toTopOf="@+id/musicBtn_Repeat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +69,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/music_imgStarship"
+                android:layout_width="300dp"
+                android:layout_height="176dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spaceship_animation"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageButton
                 android:id="@+id/musicBtn_MainTheme"
                 android:layout_width="314dp"
@@ -60,8 +89,9 @@
                 android:background="@drawable/ic_music_mainmenutheme"
                 android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <ImageButton
                 android:id="@+id/musicBtn_TCDT"
@@ -74,6 +104,18 @@
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/musicBtn_MainTheme" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="MUSIC PLAYER"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/music_imgStarship" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 

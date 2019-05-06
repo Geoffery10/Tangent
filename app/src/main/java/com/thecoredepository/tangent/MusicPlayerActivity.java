@@ -9,13 +9,16 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
 public class MusicPlayerActivity extends AppCompatActivity
 {
     MusicPlayer musicPlayer = new MusicPlayer();
+    AnimationDrawable animSpaceship;
     AnimationDrawable animStarField;
+    Boolean repeatAll = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class MusicPlayerActivity extends AppCompatActivity
 
         ImageButton btnBack = findViewById(R.id.musicBtn_Back);
         ImageButton btnStop = findViewById(R.id.musicBtn_Stop);
+        ImageButton btnRepeat = findViewById(R.id.musicBtn_Repeat);
 
         ImageButton btnMainTheme = findViewById(R.id.musicBtn_MainTheme);
         ImageButton btnTheCoreDespositoryTheme = findViewById(R.id.musicBtn_TCDT);
@@ -65,6 +69,13 @@ public class MusicPlayerActivity extends AppCompatActivity
             }
         });
 
+        btnRepeat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MusicPlayerActivity.this, "Repeat All Under Development", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         startAnimation();
     }
 
@@ -75,6 +86,11 @@ public class MusicPlayerActivity extends AppCompatActivity
         starfield.setBackgroundResource(R.drawable.starfield);
         animStarField = (AnimationDrawable) starfield.getBackground();
         animStarField.start();
+        //Starship Animation
+        ImageView spaceship = (ImageView) findViewById(R.id.music_imgStarship);
+        spaceship.setBackgroundResource(R.drawable.spaceship_animation);
+        animSpaceship = (AnimationDrawable) spaceship.getBackground();
+        animSpaceship.start();
     }
 
     //=====================================================================
