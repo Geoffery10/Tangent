@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         ImageButton btnPlay = findViewById(R.id.btnPlay);
         ImageButton btnMusicPlayer = findViewById(R.id.btnMusicPlayer);
         ImageButton btnCredits = findViewById(R.id.btnCredits);
-        ImageButton btnSetting = findViewById(R.id.btnBack);
+        ImageButton btnSetting = findViewById(R.id.btnSettings);
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
