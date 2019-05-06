@@ -12,12 +12,12 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
 public class MainActivity extends AppCompatActivity
 {
+    MusicPlayer musicPlayer = new MusicPlayer();
 
-    private MediaPlayer musicPlayer;
-    private MediaPlayer soundPlayer;
     AnimationDrawable animSpaceship;
     AnimationDrawable animStarField;
 
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        musicPlayer.setApplicationContext(getApplicationContext());
 
         //=================================================================
         //                           BUTTONS
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 //Open Credits
                 Intent in = new Intent(getApplicationContext(), CreditsActivity.class);
-                stopPlaying();
+                musicPlayer.stopPlaying();
                 startActivity(in);
             }
         });
@@ -91,51 +93,7 @@ public class MainActivity extends AppCompatActivity
         animStarField.start();
     }
 
-    //=====================================================================
-    //                               MUSIC
-    //=====================================================================
 
-    public void stopPlaying()
-    {
-        if (soundPlayer != null)
-        {
-            soundPlayer.reset();
-            soundPlayer.stop();
-            soundPlayer.release();
-            soundPlayer=null;
-            musicPlayer.reset();
-            musicPlayer.stop();
-            musicPlayer.release();
-            musicPlayer=null;
-        }
-    }
-
-    public void startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
-    {
-        if (soundTrue == true)
-        {
-            Log.i("Player", "STOP");
-            stopPlaying();
-            soundPlayer = MediaPlayer.create(getApplicationContext(), sound);
-            soundPlayer.start();
-            soundPlayer.setLooping(loopingTrue);
-            Log.i("Player", "START = " + sound);
-        }
-        else
-        {
-            Log.i("Player", "STOP");
-            stopPlaying();
-            musicPlayer = MediaPlayer.create(getApplicationContext(), sound);
-            musicPlayer.start();
-            musicPlayer.setLooping(loopingTrue);
-            Log.i("Player", "START = " + sound);
-        }
-
-    }
-
-    //=====================================================================
-    //                            MUSIC END
-    //=====================================================================
 
     //=====================================================================
     //                            FULLSCREEN
@@ -145,12 +103,12 @@ public class MainActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            startPlaying(R.raw.cyoa01smallfinal, true, false);
-            startPlaying(R.raw.rocket_thrusters, true, true);
+            musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, false);
+            musicPlayer.startPlaying(R.raw.rocket_thrusters, true, true);
         }
         else
         {
-            stopPlaying();
+            musicPlayer.stopPlaying();
         }
     }
 
