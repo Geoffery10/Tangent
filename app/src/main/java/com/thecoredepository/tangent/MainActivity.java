@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
     //                               MUSIC
     //=====================================================================
 
-    private void stopPlaying()
+    public void stopPlaying()
     {
         if (soundPlayer != null)
         {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
+    public void startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
     {
         if (soundTrue == true)
         {
