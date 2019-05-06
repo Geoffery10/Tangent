@@ -12,6 +12,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity
 {
 
+    private MediaPlayer musicPlayer;
     private MediaPlayer soundPlayer;
 
     @Override
@@ -34,17 +35,34 @@ public class MainActivity extends AppCompatActivity
             soundPlayer.stop();
             soundPlayer.release();
             soundPlayer=null;
+            musicPlayer.reset();
+            musicPlayer.stop();
+            musicPlayer.release();
+            musicPlayer=null;
         }
     }
 
-    private void startPlaying(@RawRes int sound, boolean loopingTrue)
+    private void startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
     {
-        Log.i("My App", "STOP");
-        stopPlaying();
-        soundPlayer = MediaPlayer.create(getApplicationContext(), sound);
-        soundPlayer.start();
-        soundPlayer.setLooping(loopingTrue);
-        Log.i("My App", "START");
+        if (soundTrue == true)
+        {
+            Log.i("Player", "STOP");
+            stopPlaying();
+            soundPlayer = MediaPlayer.create(getApplicationContext(), sound);
+            soundPlayer.start();
+            soundPlayer.setLooping(loopingTrue);
+            Log.i("Player", "START = " + sound);
+        }
+        else
+        {
+            Log.i("Player", "STOP");
+            stopPlaying();
+            musicPlayer = MediaPlayer.create(getApplicationContext(), sound);
+            musicPlayer.start();
+            musicPlayer.setLooping(loopingTrue);
+            Log.i("Player", "START = " + sound);
+        }
+
     }
 
     //=====================================================================
@@ -59,7 +77,8 @@ public class MainActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            startPlaying(R.raw.cyoa01smallfinal, true);
+            startPlaying(R.raw.cyoa01smallfinal, true, false);
+            startPlaying(R.raw.rocket_thrusters, true, true);
         }
         else
         {
