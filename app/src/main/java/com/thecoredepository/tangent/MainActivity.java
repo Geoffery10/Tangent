@@ -7,10 +7,10 @@ import android.support.annotation.RawRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity
     private MediaPlayer soundPlayer;
     AnimationDrawable animSpaceship;
 
+    //=====================================================================
+    //                               onCreate
+    //=====================================================================
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -26,9 +30,55 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        ImageView spaceship = (ImageView) findViewById(R.id.animSpaceship);
-        spaceship.setBackgroundResource(R.drawable.spaceship_animation);
+        startAnimations();
 
+
+        //=================================================================
+        //                           BUTTONS
+        //=================================================================
+
+        ImageButton btnPlay = findViewById(R.id.btnCredits);
+        ImageButton btnCredits = findViewById(R.id.btnCredits);
+        ImageButton btnSetting = findViewById(R.id.btnSettings);
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Starts Game
+                Toast.makeText(MainActivity.this, "Play Under Development", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnCredits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Credits
+
+            }
+        });
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Opens Settings Menu
+                Toast.makeText(MainActivity.this, "Settings Under Development", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //=================================================================
+        //                         BUTTONS END
+        //=================================================================
+    }
+
+    //=====================================================================
+    //                            onCreate END
+    //=====================================================================
+
+    private void startAnimations()
+    {
+        //Starship Animation
+        ImageView spaceship = (ImageView) findViewById(R.id.imgLogo);
+        spaceship.setBackgroundResource(R.drawable.spaceship_animation);
         animSpaceship = (AnimationDrawable) spaceship.getBackground();
         animSpaceship.start();
     }
