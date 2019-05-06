@@ -3,33 +3,24 @@ package com.thecoredepository.tangent;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.MediaPlayer;
-import android.support.annotation.RawRes;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.ScrollView;
+
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
-public class MainActivity extends AppCompatActivity
+public class MusicPlayerActivity extends AppCompatActivity
 {
     MusicPlayer musicPlayer = new MusicPlayer();
-
-    AnimationDrawable animSpaceship;
     AnimationDrawable animStarField;
 
-    //=====================================================================
-    //                               onCreate
-    //=====================================================================
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_musicplayer);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         musicPlayer.setApplicationContext(getApplicationContext());
@@ -38,73 +29,53 @@ public class MainActivity extends AppCompatActivity
         //                           BUTTONS
         //=================================================================
 
-        ImageButton btnPlay = findViewById(R.id.btnPlay);
-        ImageButton btnMusicPlayer = findViewById(R.id.btnMusicPlayer);
-        ImageButton btnCredits = findViewById(R.id.btnCredits);
-        ImageButton btnSetting = findViewById(R.id.btnBack);
+        ImageButton btnBack = findViewById(R.id.musicBtn_Back);
+        ImageButton btnStop = findViewById(R.id.musicBtn_Stop);
 
-        btnPlay.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnMainTheme = findViewById(R.id.musicBtn_MainTheme);
+        ImageButton btnTheCoreDespositoryTheme = findViewById(R.id.musicBtn_TCDT);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Starts Game
-                Toast.makeText(MainActivity.this, "Play Under Development", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnMusicPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Open Credits
-                Intent in = new Intent(getApplicationContext(), MusicPlayerActivity.class);
+                Intent in = new Intent(getApplicationContext(), MainActivity.class);
                 musicPlayer.stopPlaying();
                 startActivity(in);
             }
         });
 
-        btnCredits.setOnClickListener(new View.OnClickListener() {
+        btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Open Credits
-                Intent in = new Intent(getApplicationContext(), CreditsActivity.class);
                 musicPlayer.stopPlaying();
-                startActivity(in);
             }
         });
 
-        btnSetting.setOnClickListener(new View.OnClickListener() {
+        btnMainTheme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Opens Settings Menu
-                Toast.makeText(MainActivity.this, "Settings Under Development", Toast.LENGTH_SHORT).show();
+                musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, false);
             }
         });
 
-        //=================================================================
-        //                         BUTTONS END
-        //=================================================================
+        btnTheCoreDespositoryTheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicPlayer.startPlaying(R.raw.intro, true, false);
+            }
+        });
 
-        startAnimations();
+        startAnimation();
     }
 
-    //=====================================================================
-    //                            onCreate END
-    //=====================================================================
-
-    private void startAnimations()
+    private void startAnimation()
     {
         //StarField Animation
-        ImageView starfield = (ImageView) findViewById(R.id.imgStarField);
+        ScrollView starfield = findViewById(R.id.musicScroll);
         starfield.setBackgroundResource(R.drawable.starfield);
         animStarField = (AnimationDrawable) starfield.getBackground();
         animStarField.start();
-        //Starship Animation
-        ImageView spaceship = (ImageView) findViewById(R.id.imgStarship);
-        spaceship.setBackgroundResource(R.drawable.spaceship_animation);
-        animSpaceship = (AnimationDrawable) spaceship.getBackground();
-        animSpaceship.start();
     }
-
-
 
     //=====================================================================
     //                            FULLSCREEN
@@ -114,12 +85,10 @@ public class MainActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, false);
-            musicPlayer.startPlaying(R.raw.rocket_thrusters, true, true);
         }
         else
         {
-            musicPlayer.stopPlaying();
+
         }
     }
 
@@ -153,4 +122,5 @@ public class MainActivity extends AppCompatActivity
     //=====================================================================
     //                          FULLSCREEN END
     //=====================================================================
+
 }
