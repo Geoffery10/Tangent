@@ -2,6 +2,7 @@ package com.thecoredepository.tangent;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.RawRes;
@@ -9,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 
 public class CreditsActivity extends AppCompatActivity
 {
@@ -23,6 +26,13 @@ public class CreditsActivity extends AppCompatActivity
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
+
+        //StarField Animation
+        AnimationDrawable animStarField;
+        ScrollView creditsScrollView = findViewById(R.id.creditScroll);
+        creditsScrollView.setBackgroundResource(R.drawable.starfield);
+        animStarField = (AnimationDrawable) creditsScrollView.getBackground();
+        animStarField.start();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        startAnimations();
-
-
         //=================================================================
         //                           BUTTONS
         //=================================================================
@@ -72,6 +69,8 @@ public class MainActivity extends AppCompatActivity
         //=================================================================
         //                         BUTTONS END
         //=================================================================
+
+        startAnimations();
     }
 
     //=====================================================================
@@ -88,8 +87,8 @@ public class MainActivity extends AppCompatActivity
         //Starship Animation
         ImageView spaceship = (ImageView) findViewById(R.id.imgStarship);
         spaceship.setBackgroundResource(R.drawable.spaceship_animation);
-        animSpaceship = (AnimationDrawable) spaceship.getBackground();
-        animSpaceship.start();
+        animStarField = (AnimationDrawable) spaceship.getBackground();
+        animStarField.start();
     }
 
     //=====================================================================
