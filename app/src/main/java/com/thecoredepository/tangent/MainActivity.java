@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity
     private MediaPlayer musicPlayer;
     private MediaPlayer soundPlayer;
     AnimationDrawable animSpaceship;
+    AnimationDrawable animStarField;
 
     //=====================================================================
     //                               onCreate
@@ -79,8 +80,13 @@ public class MainActivity extends AppCompatActivity
 
     private void startAnimations()
     {
+        //StarField Animation
+        ImageView starfield = (ImageView) findViewById(R.id.imgStarField);
+        starfield.setBackgroundResource(R.drawable.starfield);
+        animSpaceship = (AnimationDrawable) starfield.getBackground();
+        animSpaceship.start();
         //Starship Animation
-        ImageView spaceship = (ImageView) findViewById(R.id.imgLogo);
+        ImageView spaceship = (ImageView) findViewById(R.id.imgStarship);
         spaceship.setBackgroundResource(R.drawable.spaceship_animation);
         animSpaceship = (AnimationDrawable) spaceship.getBackground();
         animSpaceship.start();
