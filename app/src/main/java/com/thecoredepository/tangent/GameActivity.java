@@ -6,7 +6,9 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
@@ -25,6 +27,9 @@ public class GameActivity extends AppCompatActivity
         //=================================================================
 
         ImageButton btnBack = findViewById(R.id.btn_inGame_Quit);
+        Button btnContinue = findViewById(R.id.btnContinue);
+        Button btnOptionA = findViewById(R.id.btnOptionA);
+        Button btnOptionB = findViewById(R.id.btnOptionB);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +37,27 @@ public class GameActivity extends AppCompatActivity
                 Intent in = new Intent(getApplicationContext(), MainActivity.class);
                 musicPlayer.stopPlaying();
                 startActivity(in);
+            }
+        });
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Continue is Under Development", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnOptionA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Option A is Under Development", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnOptionB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Option B is Under Development", Toast.LENGTH_SHORT).show();
             }
         });
 

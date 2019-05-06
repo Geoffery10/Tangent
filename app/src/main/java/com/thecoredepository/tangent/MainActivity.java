@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Opens Settings Menu
-                Toast.makeText(MainActivity.this, "Settings Under Development", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Settings is Under Development", Toast.LENGTH_SHORT).show();
             }
         });
 
