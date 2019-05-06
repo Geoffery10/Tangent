@@ -8,7 +8,8 @@
     android:configChanges="orientation"
     android:screenOrientation="portrait"
     tools:context="com.thecoredepository.tangent.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:gravity="center">
 
     <ImageButton
         android:id="@+id/btnSettings"
@@ -22,16 +23,17 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="370dp"
-        android:layout_height="211dp"
+        android:id="@+id/animSpaceship"
+        android:layout_width="300dp"
+        android:layout_height="176dp"
         android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="150dp"
+        android:background="@drawable/spaceship_animation"
+        android:gravity="center"
         android:scaleType="fitCenter"
-        android:src="@drawable/spaceship_01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +65,7 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/animSpaceship" />
 
 
 </android.support.constraint.ConstraintLayout>

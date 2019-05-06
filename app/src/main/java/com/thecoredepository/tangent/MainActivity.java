@@ -1,19 +1,23 @@
 package com.thecoredepository.tangent;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.support.annotation.RawRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
 {
 
     private MediaPlayer musicPlayer;
     private MediaPlayer soundPlayer;
+    AnimationDrawable animSpaceship;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,6 +25,12 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        ImageView spaceship = (ImageView) findViewById(R.id.animSpaceship);
+        spaceship.setBackgroundResource(R.drawable.spaceship_animation);
+
+        animSpaceship = (AnimationDrawable) spaceship.getBackground();
+        animSpaceship.start();
     }
 
     //=====================================================================
