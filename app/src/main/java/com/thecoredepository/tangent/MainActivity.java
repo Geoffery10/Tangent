@@ -1,5 +1,6 @@
 package com.thecoredepository.tangent;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         ImageButton btnPlay = findViewById(R.id.btnCredits);
         ImageButton btnCredits = findViewById(R.id.btnCredits);
-        ImageButton btnSetting = findViewById(R.id.btnSettings);
+        ImageButton btnSetting = findViewById(R.id.btnBack);
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Open Credits
-
+                Intent in = new Intent(getApplicationContext(), CreditsActivity.class);
+                startActivity(in);
             }
         });
 

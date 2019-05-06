@@ -4,31 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     android:configChanges="orientation"
     android:screenOrientation="portrait"
     tools:context="com.thecoredepository.tangent.MainActivity"
     tools:layout_editor_absoluteY="81dp"
     android:gravity="center">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo"/>
-
     <ImageButton
-        android:id="@+id/btnSettings"
+        android:id="@+id/btnBack"
         android:layout_width="80dp"
         android:layout_height="77dp"
         android:background="@color/colorPrimary"
         android:contentDescription="Settings"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_settings"
+        android:src="@drawable/ic_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -41,12 +31,27 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="150dp"
-        android:background="@drawable/spaceship_animation"
+        android:src="@drawable/ic_logo"
         android:gravity="center"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTheCoreDepository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="The Core Depository"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
 
 </android.support.constraint.ConstraintLayout>
