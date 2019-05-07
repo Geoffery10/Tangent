@@ -10,6 +10,7 @@ import android.util.Log;
 import com.thecoredepository.tangent.story.StoryObject;
 
 import java.util.ArrayList;
+import com.thecoredepository.tangent.story.PlayerObject;
 
 public class GenerateStory
 {
@@ -18,6 +19,7 @@ public class GenerateStory
     public void generateStory()
     {
         //All of these properties should be used
+        PlayerObject player = new PlayerObject();
         String key;
         int background;
         int forground;
@@ -58,7 +60,7 @@ public class GenerateStory
         forground = -1;
         music = 2;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "Agh! Late again! I should call and explai-";
         continueTrue = true;
         optionA = "";
@@ -75,7 +77,7 @@ public class GenerateStory
         forground = -1;
         music = 0;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "...";
         continueTrue = true;
         optionA = "";
@@ -93,7 +95,7 @@ public class GenerateStory
         forground = -1;
         music = 0;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "Ok... Well I hated that place anyway. Question is, what do I do now?";
         continueTrue = false;
         optionA = "Try to find a new job.";
@@ -110,7 +112,7 @@ public class GenerateStory
         forground = -1;
         music = -1;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "That's the fourth this month. Guess I'll just pick myself up and try again." +
                 " Maybe I'll stick with one shift this time...";
         continueTrue = true;
@@ -128,7 +130,7 @@ public class GenerateStory
         forground = -1;
         music = -1;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "Off to the Bureau of Employment... again...";
         continueTrue = false;
         optionA = "";
@@ -146,7 +148,7 @@ public class GenerateStory
         forground = -1;
         music = -1;
         sound = -1;
-        charName = "Steven";
+        charName = player.getPlayerName();
         speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going" +
                 " to take my fate in my own hands.";
         continueTrue = false;
