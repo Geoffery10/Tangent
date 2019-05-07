@@ -95,15 +95,29 @@ public class GenerateStory
         background = 0;
         forground = 0;
         charName = "Steven";
-        speechText = "...";
+        speechText = "Off to the Bureau of Employment... again...";
         continueTrue = true;
         optionA = "";
         optionB = "";
-        leftChild = "1_1";
+        leftChild = "";
         rightChild = "";
         StoryObject story4_1;
         storyArray.add(story4_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		//end of current story
+		//end of current story arc 1
+		
+		key = "3_2";
+        background = 0;
+        forground = 0;
+        charName = "Steven";
+        speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going to take my fate in my own hands.";
+        continueTrue = false;
+        optionA = "Buy a weapon with the last of your money.";
+        optionB = "Try to get on board a starship.";
+        leftChild = "4_2";
+        rightChild = "4_3";
+        StoryObject story3_2;
+        storyArray.add(story3_2 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		//end of current story arc 2
 
         //=====================================================================
         //                         STORY DATA END
