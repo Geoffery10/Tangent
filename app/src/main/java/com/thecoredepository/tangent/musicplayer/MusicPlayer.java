@@ -80,6 +80,7 @@ public final class MusicPlayer
 
     public void setApplicationContext(Context context1)
     {
+        Log.i("Player", "Context = " + context1);
         this.context = context1;
     }
 

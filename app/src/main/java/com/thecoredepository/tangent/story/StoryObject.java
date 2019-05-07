@@ -5,6 +5,8 @@ public class StoryObject
     private String key;
     private int background;
     private int forground;
+    private int music;
+    private int sound;
     private String charName;
     private String speech;
     private Boolean continueTrue;
@@ -13,11 +15,13 @@ public class StoryObject
     private String leftChild;
     private String rightChild;
 
-    StoryObject(String key, int background, int forground, String charName, String speech, Boolean continueTrue, String optionA, String optionB, String leftChild, String rightChild)
+    StoryObject(String key, int background, int forground, int music, int sound, String charName, String speech, Boolean continueTrue, String optionA, String optionB, String leftChild, String rightChild)
     {
         this.key = key;
         this.background = background;
         this.forground = forground;
+        this.music = music;
+        this.sound = sound;
         this.charName = charName;
         this.speech = speech;
         this.continueTrue = continueTrue;
@@ -49,6 +53,22 @@ public class StoryObject
 
     public void setForground(int forground) {
         this.forground = forground;
+    }
+
+    public int getMusic() {
+        return music;
+    }
+
+    public void setMusic(int music) {
+        this.music = music;
+    }
+
+    public int getSound() {
+        return sound;
+    }
+
+    public void setSound(int sound) {
+        this.sound = sound;
     }
 
     public String getCharName() {

@@ -1,5 +1,6 @@
 package com.thecoredepository.tangent;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
@@ -36,6 +37,8 @@ public class GameActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        musicPlayer.setApplicationContext(getApplicationContext());
 
         btnContinue = findViewById(R.id.btnContinue);
         btnOptionA = findViewById(R.id.btnOptionA);
@@ -115,6 +118,8 @@ public class GameActivity extends AppCompatActivity
     {
         setBackground();
         setForground();
+        setMusic();
+        setSound();
 
         Log.i("Tree", "Loading UI");
         TextView name = findViewById(R.id.txtName);
@@ -200,6 +205,48 @@ public class GameActivity extends AppCompatActivity
         }
     }
 
+    public void setMusic()
+    {
+        musicPlayer.setApplicationContext(getApplicationContext());
+        boolean soundTrue = false;
+
+        Log.i("Tree", "musicID = " + storyObject.getMusic());
+        switch (storyObject.getMusic())
+        {
+            case 0:
+
+                break;
+            case 1:
+                musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, soundTrue);
+                break;
+            case 2:
+                musicPlayer.startPlaying(R.raw.intro, true, soundTrue);
+            default:
+                musicPlayer.stopPlaying();
+                break;
+        }
+    }
+
+    public void setSound()
+    {
+        musicPlayer.setApplicationContext(getApplicationContext());
+        boolean soundTrue = true;
+
+        Log.i("Tree", "soundID = " + storyObject.getSound());
+        switch (storyObject.getMusic())
+        {
+            case 0:
+
+                break;
+            case 1:
+                musicPlayer.startPlaying(R.raw.rocket_thrusters, true, soundTrue);
+                break;
+            default:
+                musicPlayer.stopPlaying();
+                break;
+        }
+    }
+
     //=====================================================================
     //                            FULLSCREEN
     //=====================================================================
@@ -208,8 +255,7 @@ public class GameActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            //musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, false);
-            //musicPlayer.startPlaying(R.raw.rocket_thrusters, true, true);
+
         }
         else
         {
