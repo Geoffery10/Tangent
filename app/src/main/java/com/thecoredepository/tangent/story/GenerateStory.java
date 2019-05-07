@@ -60,7 +60,7 @@ public class GenerateStory
         storyArray.add(story0_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
 		key = "1_1";
-        background = -1;
+        background = 2;
         forground = -1;
         music = 0;
         sound = -1;
@@ -76,7 +76,7 @@ public class GenerateStory
         //Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
 		
 		key = "2_1";
-        background = -1;
+        background = 2;
         forground = -1;
         music = 0;
         sound = -1;

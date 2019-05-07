@@ -3,12 +3,14 @@ package com.thecoredepository.tangent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -100,19 +102,6 @@ public class GameActivity extends AppCompatActivity
 
     }
 
-    private void startAnimations()
-    {
-        //Forground Animation
-        ImageView imgForground = (ImageView) findViewById(R.id.imgForground);
-        imgForground.setBackgroundResource(R.drawable.spaceship_animation);
-        animForground = (AnimationDrawable) imgForground.getBackground();
-        animForground.start();
-        //Background Animation
-        //ImageView spaceship = (ImageView) findViewById(R.id.imgBackground);
-        //spaceship.setBackgroundResource(R.drawable.spaceship_animation);
-        //animBackground = (AnimationDrawable) spaceship.getBackground();
-        //animBackground.start();
-    }
 
     public void loadUI(StoryObject storyObject)
     {
@@ -176,18 +165,30 @@ public class GameActivity extends AppCompatActivity
     public void setBackground()
     {
         ImageView imgBackground = findViewById(R.id.imgBackground);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        imgBackground.setMaxHeight(size.x);
+        imgBackground.setMinimumHeight(size.x);
+        imgBackground.setMaxWidth(size.x);
+        imgBackground.setMinimumWidth(size.x);
 
         Log.i("Tree", "bgID = " + storyObject.getBackground());
         switch (storyObject.getBackground())
         {
             case 0:
-                imgBackground.setImageResource(R.drawable.background_0_space);
+                imgBackground.setBackgroundResource(R.drawable.background_0_space);
                 break;
             case 1:
-                imgBackground.setImageResource(R.drawable.background_1_alarmclock);
+                imgBackground.setBackgroundResource(R.drawable.background_1_alarmclock);
+                break;
+            case 2:
+                imgBackground.setBackgroundResource(R.drawable.background_2_computer);
+                animBackground = (AnimationDrawable) imgBackground.getBackground();
+                animBackground.start();
                 break;
             default:
-                imgBackground.setImageResource(R.color.colorPrimaryDark);
+                imgBackground.setBackgroundResource(R.color.colorPrimaryDark);
                 break;
         }
     }
