@@ -112,8 +112,11 @@ public class GenerateStory
 
     public StoryObject getStoryByID(String key)
     {
-        int foundAt = 0;
-        
-        return storyArray.get(foundAt);
+        for (int i = 0; i < storyArray.size(); i++) {
+            if (storyArray.get(i).getKey() == key) {
+                return storyArray.get(i);
+            }
+        }
+        return null;
     }
 }
