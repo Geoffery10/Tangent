@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         musicPlayer.setApplicationContext(getApplicationContext());
+        TextView txtVersion = findViewById(R.id.txtVersion);
+        txtVersion.setText("Version: " + BuildConfig.VERSION_NAME);
 
         //=================================================================
         //                           BUTTONS
