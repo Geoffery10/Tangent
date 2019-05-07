@@ -1,14 +1,14 @@
 package com.thecoredepository.tangent.tree;
 
+import java.util.Iterator;
 import android.util.Log;
-
-import com.thecoredepository.tangent.tree.SceneNode;
 
 
 public final class StoryTree
 {
     Node root;
     Node focusNode = root;
+
 
     public void addNode(int key, String name, int Background, int Forground, String Name, String Speech, Boolean Continue, String OptionA, String OptionB)
     {
@@ -39,11 +39,11 @@ public final class StoryTree
                 }
                 else
                 {
-                    focusNode = focusNode.righNode;
+                    focusNode = focusNode.rightNode;
 
                     if (focusNode == null)
                     {
-                        parent.righNode = newNode;
+                        parent.rightNode = newNode;
                         return;
                     }
                 }
@@ -59,7 +59,7 @@ public final class StoryTree
 
             Log.i("Tree", String.valueOf(focusNode));
 
-            inOrderTraverseTree(focusNode.righNode);
+            inOrderTraverseTree(focusNode.rightNode);
         }
     }
 
@@ -71,7 +71,7 @@ public final class StoryTree
 
             preOrderTraverseTree(focusNode.leftNode);
 
-            preOrderTraverseTree(focusNode.righNode);
+            preOrderTraverseTree(focusNode.rightNode);
         }
     }
 
@@ -88,9 +88,9 @@ public final class StoryTree
     public boolean getLeft()
     {
         boolean result;
-        if (focusNode.leftNode != null)
+        if (focusNode.getRightNode() != null)
         {
-            focusNode = focusNode.leftNode;
+            focusNode = focusNode.getRightNode();
             result = true;
         }
         else
@@ -103,9 +103,9 @@ public final class StoryTree
     public boolean getRight()
     {
         boolean result;
-        if (focusNode.righNode != null)
+        if (focusNode.getRightNode() != null)
         {
-            focusNode = focusNode.righNode;
+            focusNode = focusNode.getRightNode();
             result = true;
         }
         else
@@ -117,44 +117,50 @@ public final class StoryTree
 
     public boolean isLeftEmpty()
     {
-        boolean result;
-        if (focusNode.leftNode != null)
+        Log.i("Tree", "isLeftEmpty()");
+        if (focusNode != null)
         {
-            result = false;
+            Log.i("Tree", String.valueOf(focusNode));
+            Log.i("Tree", String.valueOf(focusNode.leftNode));
+            return focusNode.leftNode == null;
         }
-        else
-        {
-            result = true;
-        }
-        return result;
+        Log.i("Tree", "FocusNode == Null");
+        return true;
     }
 
     public boolean isRightEmpty()
     {
-        boolean result;
-        if (focusNode.righNode != null)
+        Log.i("Tree", "isRightEmpty()");
+        if (focusNode != null)
         {
-            result = false;
+            Log.i("Tree", String.valueOf(focusNode));
+            Log.i("Tree", String.valueOf(focusNode.rightNode));
+            return focusNode.rightNode == null;
         }
-        else
-        {
-            result = true;
-        }
-        return result;
+        Log.i("Tree", "FocusNode == Null");
+        return true;
     }
 
-    public void generateTree()
+
+
+    public void generateTree(StoryTree storyTree)
     {
         Log.i("Tree", "Launched Generate Tree");
-        StoryTree storyTree = new StoryTree();
+        focusNode = root;
+
 
         storyTree.addNode(1000, "Start", 6, 6, "Billy", "Hello", true, "Test A", "Test B");
         storyTree.addNode(950, "1-1", 6, 6, "Bob", "Hello", true, "Test A", "Test B");
         storyTree.addNode(900, "2-1", 6, 6, "Tim", "Hello", true, "Test A", "Test B");
         storyTree.addNode(850, "2-1", 6, 6, "John", "Hello", true, "Test A", "Test B");
         storyTree.addNode(800, "3-1", 6, 6, "Steve", "Hello", true, "Test A", "Test B");
+    }
 
-        storyTree.preOrderTraverseTree(storyTree.root);
+    public Iterator<Node> iterator(StoryTree storyTree)
+    {
+        Iterator<Node> it = storyTree.iterator(storyTree);
+        it.hasNext();
+        return it;
     }
 }
 
@@ -171,7 +177,7 @@ class Node
     String OptionB;
 
     Node leftNode;
-    Node righNode;
+    Node rightNode;
 
     Node(int key, String name, int Background, int Forground, String Name, String Speech, Boolean Continue, String OptionA, String OptionB)
     {
@@ -199,6 +205,16 @@ class Node
         result += getOptionA() + "\n";
         result += getOptionB();
         return result;
+    }
+
+    public Node getLeftNode()
+    {
+        return leftNode;
+    }
+
+    public Node getRightNode()
+    {
+        return rightNode;
     }
 
     public int getBackground() {

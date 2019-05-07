@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -22,6 +23,9 @@ public class GameActivity extends AppCompatActivity
 
     StoryTree storytree = new StoryTree();
 
+    Button btnContinue;
+    Button btnOptionA;
+    Button btnOptionB;
 
 
     @Override
@@ -30,18 +34,23 @@ public class GameActivity extends AppCompatActivity
         setContentView(R.layout.activity_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        //Story Tree
-        storytree.generateTree();
+        btnContinue = findViewById(R.id.btnContinue);
+        btnOptionA = findViewById(R.id.btnOptionA);
+        btnOptionB = findViewById(R.id.btnOptionB);
 
+        //Story Tree
+        Log.i("Tree", "Generating Tree");
+        storytree.generateTree(storytree);
+        Log.i("Tree", "Generated Tree");
+
+        Log.i("Tree", "LoadUI");
+        loadUI();
 
         //=================================================================
         //                           BUTTONS
         //=================================================================
 
         ImageButton btnBack = findViewById(R.id.btn_inGame_Quit);
-        Button btnContinue = findViewById(R.id.btnContinue);
-        Button btnOptionA = findViewById(R.id.btnOptionA);
-        Button btnOptionB = findViewById(R.id.btnOptionB);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +101,29 @@ public class GameActivity extends AppCompatActivity
         //spaceship.setBackgroundResource(R.drawable.spaceship_animation);
         //animBackground = (AnimationDrawable) spaceship.getBackground();
         //animBackground.start();
+    }
+
+    public void loadUI()
+    {
+        btnContinue = findViewById(R.id.btnContinue);
+        btnOptionA = findViewById(R.id.btnOptionA);
+        btnOptionB = findViewById(R.id.btnOptionB);
+
+        Log.i("Tree", "Loading UI");
+        if (storytree.isLeftEmpty() == false)
+        {
+
+        }
+        if (storytree.isRightEmpty() == false)
+        {
+            btnOptionB.setVisibility(View.VISIBLE);
+            btnOptionB.setEnabled(true);
+        }
+        else
+        {
+            btnOptionB.setVisibility(View.INVISIBLE);
+            btnOptionB.setEnabled(false);
+        }
     }
 
     //=====================================================================
