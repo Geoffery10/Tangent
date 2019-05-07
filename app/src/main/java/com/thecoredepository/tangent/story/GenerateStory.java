@@ -1,5 +1,7 @@
 package com.thecoredepository.tangent.story;
 
+import android.util.Log;
+
 import com.thecoredepository.tangent.story.StoryObject;
 
 import java.util.ArrayList;
@@ -11,8 +13,8 @@ public class GenerateStory
     public void generateStory()
     {
         String key;
-        int background = 0;
-        int forground = 0;
+        int background;
+        int forground;
         String charName;
         String speechText;
         Boolean continueTrue;
@@ -39,8 +41,8 @@ public class GenerateStory
         //rightChild equals "" unless there us an option B
 
         key = "0_1";
-        background = 0;
-        forground = 0;
+        background = 1;
+        forground = -1;
         charName = "Steven";
         speechText = "Agh! Late again! I should call and explai-";
         continueTrue = true;
@@ -50,10 +52,10 @@ public class GenerateStory
         rightChild = "";
         StoryObject story0_1;
         storyArray.add(story0_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		
+
 		key = "1_1";
-        background = 0;
-        forground = 0;
+        background = -1;
+        forground = -1;
         charName = "Steven";
         speechText = "...";
         continueTrue = true;
@@ -66,8 +68,8 @@ public class GenerateStory
 		//Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
 		
 		key = "2_1";
-        background = 0;
-        forground = 0;
+        background = -1;
+        forground = -1;
         charName = "Steven";
         speechText = "Ok... Well I hated that place anyway. Question is, what do I do now?";
         continueTrue = false;
@@ -79,8 +81,8 @@ public class GenerateStory
         storyArray.add(story2_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		key = "3_1";
-        background = 0;
-        forground = 0;
+        background = -1;
+        forground = -1;
         charName = "Steven";
         speechText = "That's the fourth this month. Guess I'll just pick myself up and try again. Maybe I'll stick with one shift this time...";
         continueTrue = true;
@@ -92,8 +94,8 @@ public class GenerateStory
         storyArray.add(story3_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		key = "4_1";
-        background = 0;
-        forground = 0;
+        background = -1;
+        forground = -1;
         charName = "Steven";
         speechText = "Off to the Bureau of Employment... again...";
         continueTrue = false;
@@ -106,8 +108,8 @@ public class GenerateStory
 		//end of current story arc 1
 		
 		key = "3_2";
-        background = 0;
-        forground = 0;
+        background = -1;
+        forground = -1;
         charName = "Steven";
         speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going to take my fate in my own hands.";
         continueTrue = false;

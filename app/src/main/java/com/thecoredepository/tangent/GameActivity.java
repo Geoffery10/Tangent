@@ -3,7 +3,9 @@ package com.thecoredepository.tangent;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -44,6 +46,7 @@ public class GameActivity extends AppCompatActivity
         storyObject = story.getStoryByID("0_1");
 
         //Load UI
+        //startAnimations();
         loadUI(storyObject);
 
         //=================================================================
@@ -92,7 +95,6 @@ public class GameActivity extends AppCompatActivity
         //                         BUTTONS END
         //=================================================================
 
-        startAnimations();
     }
 
     private void startAnimations()
@@ -111,6 +113,9 @@ public class GameActivity extends AppCompatActivity
 
     public void loadUI(StoryObject storyObject)
     {
+        setBackground();
+        setForground();
+
         Log.i("Tree", "Loading UI");
         TextView name = findViewById(R.id.txtName);
         TextView body = findViewById(R.id.txtBody);
@@ -160,6 +165,38 @@ public class GameActivity extends AppCompatActivity
             Log.i("Tree", "OptionB was empty");
             btnOptionB.setEnabled(false);
             btnOptionB.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void setBackground()
+    {
+        ImageView imgBackground = findViewById(R.id.imgBackground);
+
+        Log.i("Tree", "bgID = " + storyObject.getBackground());
+        switch (storyObject.getBackground())
+        {
+            case 0:
+                imgBackground.setImageResource(R.drawable.background_0_space);
+                break;
+            case 1:
+                imgBackground.setImageResource(R.drawable.background_1_alarmclock);
+                break;
+            default:
+                imgBackground.setImageResource(R.color.colorPrimaryDark);
+                break;
+        }
+    }
+
+    public void setForground()
+    {
+        ImageView imgForground = findViewById(R.id.imgForground);
+
+        Log.i("Tree", "fgID = " + storyObject.getForground());
+        switch (storyObject.getForground())
+        {
+            default:
+                imgForground.setBackgroundResource(R.color.Blank);
+                break;
         }
     }
 

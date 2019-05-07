@@ -82,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background_bluered" />
+        app:srcCompat="@drawable/background_0_space" />
 
     <TextView
         android:id="@+id/txtName"
