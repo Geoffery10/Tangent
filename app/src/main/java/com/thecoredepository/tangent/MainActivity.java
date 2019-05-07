@@ -92,7 +92,10 @@ public class MainActivity extends AppCompatActivity
         //                         BUTTONS END
         //=================================================================
 
-        startAnimations();
+        Log.i("startAnimation", "starting");
+
+            startAnimations();
+            Log.i("startAnimation", "startAnimation Passed");
     }
 
     //=====================================================================
@@ -103,9 +106,13 @@ public class MainActivity extends AppCompatActivity
     {
         //StarField Animation
         ImageView starfield = (ImageView) findViewById(R.id.imgStarField);
-        starfield.setBackgroundResource(R.drawable.starfield);
-        animStarField = (AnimationDrawable) starfield.getBackground();
-        animStarField.start();
+        try {
+            starfield.setBackgroundResource(R.drawable.starfield);
+            animStarField = (AnimationDrawable) starfield.getBackground();
+            animStarField.start();
+        } catch (Exception e) {
+            Log.i("startAnimation", "startAnimation Failed - " + e);
+        }
         //Starship Animation
         ImageView spaceship = (ImageView) findViewById(R.id.imgStarship);
         spaceship.setBackgroundResource(R.drawable.spaceship_animation);
