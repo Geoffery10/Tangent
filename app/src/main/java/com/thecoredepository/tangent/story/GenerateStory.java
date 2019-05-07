@@ -42,7 +42,7 @@ public class GenerateStory
         background = 0;
         forground = 0;
         charName = "Steven";
-        speechText = "OH NO! I’m late again! I should call and explai…";
+        speechText = "Agh! Late again! I should call and explai-";
         continueTrue = true;
         optionA = "";
         optionB = "";
@@ -50,6 +50,47 @@ public class GenerateStory
         rightChild = "";
         StoryObject story0_1;
         storyArray.add(story0_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		key = "1_1";
+        background = 0;
+        forground = 0;
+        charName = "Steven";
+        speechText = "...";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "2_1";
+        rightChild = "";
+        StoryObject story1_1;
+        storyArray.add(story1_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		//Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
+		
+		key = "2_1";
+        background = 0;
+        forground = 0;
+        charName = "Steven";
+        speechText = "Ok... Well I hated that place anyway. Question is, what do I do now?";
+        continueTrue = false;
+        optionA = "Try to find a new job.";
+        optionB = "I've had enough. (Do something drastic)";
+        leftChild = "3_1";
+        rightChild = "3_2";
+        StoryObject story2_1;
+        storyArray.add(story2_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		key = "0_1";
+        background = 0;
+        forground = 0;
+        charName = "Steven";
+        speechText = "Agh! Late again! I should call and explai-";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "1_1";
+        rightChild = "";
+        StoryObject story0_1;
+        storyArray.add(story0_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
 
         //=====================================================================
         //                         STORY DATA END
