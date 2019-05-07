@@ -50,6 +50,9 @@ public class GenerateStory
         //leftChild equals the next key which is either continue or optionA
         //rightChild equals "" unless there us an option B
 
+        //===============================ROOT====================================
+        //This is the root of the story.
+        //index: 0
         key = "0_1";
         background = 1;
         forground = -1;
@@ -63,8 +66,10 @@ public class GenerateStory
         leftChild = "1_1";
         rightChild = "";
         StoryObject story0_1;
-        storyArray.add(story0_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+        storyArray.add(story0_1 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
+        //index: 1
 		key = "1_1";
         background = 2;
         forground = -1;
@@ -78,9 +83,11 @@ public class GenerateStory
         leftChild = "2_1";
         rightChild = "";
         StoryObject story1_1;
-        storyArray.add(story1_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+        storyArray.add(story1_1 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
         //Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
-		
+
+        //index: 2
 		key = "2_1";
         background = 2;
         forground = -1;
@@ -94,23 +101,28 @@ public class GenerateStory
         leftChild = "3_1";
         rightChild = "3_2";
         StoryObject story2_1;
-        storyArray.add(story2_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		
+        storyArray.add(story2_1 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        //index: 3
 		key = "3_1";
         background = -1;
         forground = -1;
         music = -1;
         sound = -1;
         charName = "Steven";
-        speechText = "That's the fourth this month. Guess I'll just pick myself up and try again. Maybe I'll stick with one shift this time...";
+        speechText = "That's the fourth this month. Guess I'll just pick myself up and try again." +
+                " Maybe I'll stick with one shift this time...";
         continueTrue = true;
         optionA = "";
         optionB = "";
         leftChild = "4_1";
         rightChild = "";
         StoryObject story3_1;
-        storyArray.add(story3_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		
+        storyArray.add(story3_1 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        //index: 4
 		key = "4_1";
         background = -1;
         forground = -1;
@@ -124,23 +136,27 @@ public class GenerateStory
         leftChild = "";
         rightChild = "";
         StoryObject story4_1;
-        storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+        storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		//end of current story arc 1
-		
+
+        //index: 5
 		key = "3_2";
         background = -1;
         forground = -1;
         music = -1;
         sound = -1;
         charName = "Steven";
-        speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going to take my fate in my own hands.";
+        speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going" +
+                " to take my fate in my own hands.";
         continueTrue = false;
         optionA = "";
         optionB = "";
         leftChild = "";
         rightChild = "";
         StoryObject story3_2;
-        storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+        storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		//end of current story arc 2
 
         //=====================================================================
@@ -148,6 +164,9 @@ public class GenerateStory
         //=====================================================================
     }
 
+    //This finds the next part of the story using its ID
+    //A faster way might be updated later.
+    //Big O(N)
     public StoryObject getStoryByID(String key)
     {
         for (int i = 0; i < storyArray.size(); i++) {
