@@ -13,15 +13,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
-import com.thecoredepository.tangent.tree.*;
 
 public class GameActivity extends AppCompatActivity
 {
     MusicPlayer musicPlayer = new MusicPlayer();
     AnimationDrawable animForground;
     AnimationDrawable animBackground;
-
-    StoryTree storytree = new StoryTree();
 
     Button btnContinue;
     Button btnOptionA;
@@ -38,12 +35,7 @@ public class GameActivity extends AppCompatActivity
         btnOptionA = findViewById(R.id.btnOptionA);
         btnOptionB = findViewById(R.id.btnOptionB);
 
-        //Story Tree
-        Log.i("Tree", "Generating Tree");
-        storytree.generateTree(storytree);
-        Log.i("Tree", "Generated Tree");
-
-        Log.i("Tree", "LoadUI");
+        //Load UI
         loadUI();
 
         //=================================================================
@@ -110,20 +102,7 @@ public class GameActivity extends AppCompatActivity
         btnOptionB = findViewById(R.id.btnOptionB);
 
         Log.i("Tree", "Loading UI");
-        if (storytree.isLeftEmpty() == false)
-        {
-
-        }
-        if (storytree.isRightEmpty() == false)
-        {
-            btnOptionB.setVisibility(View.VISIBLE);
-            btnOptionB.setEnabled(true);
-        }
-        else
-        {
-            btnOptionB.setVisibility(View.INVISIBLE);
-            btnOptionB.setEnabled(false);
-        }
+        
     }
 
     //=====================================================================
