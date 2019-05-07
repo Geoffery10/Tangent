@@ -78,19 +78,32 @@ public class GenerateStory
         StoryObject story2_1;
         storyArray.add(story2_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
-		key = "0_1";
+		key = "3_1";
         background = 0;
         forground = 0;
         charName = "Steven";
-        speechText = "Agh! Late again! I should call and explai-";
+        speechText = "That's the fourth this month. Guess I'll just pick myself up and try again. Maybe I'll stick with one shift this time...";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "4_1";
+        rightChild = "";
+        StoryObject story3_1;
+        storyArray.add(story3_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		key = "4_1";
+        background = 0;
+        forground = 0;
+        charName = "Steven";
+        speechText = "...";
         continueTrue = true;
         optionA = "";
         optionB = "";
         leftChild = "1_1";
         rightChild = "";
-        StoryObject story0_1;
-        storyArray.add(story0_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		
+        StoryObject story4_1;
+        storyArray.add(story4_1 = new StoryObject(key, background, forground, charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		//end of current story
 
         //=====================================================================
         //                         STORY DATA END
