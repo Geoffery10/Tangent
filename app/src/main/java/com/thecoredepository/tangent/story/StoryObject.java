@@ -90,4 +90,20 @@ public class StoryObject
     public void setOptionB(String optionB) {
         this.optionB = optionB;
     }
+
+    public String getLeftChild() {
+        return leftChild;
+    }
+
+    public void setLeftChild(String leftChild) {
+        this.leftChild = leftChild;
+    }
+
+    public String getRightChild() {
+        return rightChild;
+    }
+
+    public void setRightChild(String rightChild) {
+        this.rightChild = rightChild;
+    }
 }

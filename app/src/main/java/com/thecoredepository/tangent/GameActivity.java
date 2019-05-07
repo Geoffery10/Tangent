@@ -26,6 +26,8 @@ public class GameActivity extends AppCompatActivity
     Button btnOptionA;
     Button btnOptionB;
 
+    GenerateStory story = new GenerateStory();
+    StoryObject storyObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +40,8 @@ public class GameActivity extends AppCompatActivity
         btnOptionB = findViewById(R.id.btnOptionB);
 
         //Load Story
-        GenerateStory story = new GenerateStory();
         story.generateStory();
-        StoryObject storyObject = story.getStoryByID("1_1");
+        storyObject = story.getStoryByID("0_1");
 
         //Load UI
         loadUI(storyObject);
@@ -63,21 +64,27 @@ public class GameActivity extends AppCompatActivity
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Continue is Under Development", Toast.LENGTH_SHORT).show();
+                String key = storyObject.getLeftChild();
+                storyObject = story.getStoryByID(key);
+                loadUI(storyObject);
             }
         });
 
         btnOptionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Option A is Under Development", Toast.LENGTH_SHORT).show();
+                String key = storyObject.getLeftChild();
+                storyObject = story.getStoryByID(key);
+                loadUI(storyObject);
             }
         });
 
         btnOptionB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Option B is Under Development", Toast.LENGTH_SHORT).show();
+                String key = storyObject.getRightChild();
+                storyObject = story.getStoryByID(key);
+                loadUI(storyObject);
             }
         });
 
