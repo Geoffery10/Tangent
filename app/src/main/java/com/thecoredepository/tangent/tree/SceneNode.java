@@ -1,6 +1,6 @@
 package com.thecoredepository.tangent.tree;
 
-public final class SceneNode
+public class SceneNode
 {
     int Background;
     int Forground;

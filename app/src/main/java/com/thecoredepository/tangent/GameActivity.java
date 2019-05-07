@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
-import com.thecoredepository.tangent.tree.StoryTree.*;
+import com.thecoredepository.tangent.tree.*;
 
 public class GameActivity extends AppCompatActivity
 {
@@ -20,11 +20,19 @@ public class GameActivity extends AppCompatActivity
     AnimationDrawable animForground;
     AnimationDrawable animBackground;
 
+    StoryTree storytree = new StoryTree();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        //Story Tree
+        storytree.generateTree();
+
 
         //=================================================================
         //                           BUTTONS
