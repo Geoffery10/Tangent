@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
+import com.thecoredepository.tangent.tree.StoryTree.*;
 
 public class GameActivity extends AppCompatActivity
 {
