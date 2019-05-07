@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
+import com.thecoredepository.tangent.story.*;
 
 public class GameActivity extends AppCompatActivity
 {
@@ -35,8 +37,13 @@ public class GameActivity extends AppCompatActivity
         btnOptionA = findViewById(R.id.btnOptionA);
         btnOptionB = findViewById(R.id.btnOptionB);
 
+        //Load Story
+        GenerateStory story = new GenerateStory();
+        story.generateStory();
+        StoryObject storyObject = story.getStoryByID("1_1");
+
         //Load UI
-        loadUI();
+        loadUI(storyObject);
 
         //=================================================================
         //                           BUTTONS
@@ -95,14 +102,18 @@ public class GameActivity extends AppCompatActivity
         //animBackground.start();
     }
 
-    public void loadUI()
+    public void loadUI(StoryObject storyObject)
     {
+        Log.i("Tree", "Loading UI");
+        TextView name = findViewById(R.id.txtName);
+        TextView body = findViewById(R.id.txtBody);
         btnContinue = findViewById(R.id.btnContinue);
         btnOptionA = findViewById(R.id.btnOptionA);
         btnOptionB = findViewById(R.id.btnOptionB);
 
-        Log.i("Tree", "Loading UI");
-        
+        Log.i("Tree", "Assigning Values");
+        name.setText(storyObject.getCharName());
+        body.setText(storyObject.getSpeech());
     }
 
     //=====================================================================
