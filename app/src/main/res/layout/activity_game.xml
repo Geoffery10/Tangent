@@ -25,6 +25,7 @@
         android:id="@+id/btnContinue"
         android:layout_width="314dp"
         android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/ic_button"
         android:scaleType="fitXY"
@@ -34,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnOptionA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBody" />
 
     <Button
         android:id="@+id/btnOptionB"
@@ -56,16 +58,17 @@
 
     <TextView
         android:id="@+id/txtBody"
-        android:layout_width="407dp"
-        android:layout_height="145dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
         android:background="@color/colorPrimary"
         android:text="BODY"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/btnContinue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgForground" />
 
     <ImageView
         android:id="@+id/imgBackground"
@@ -105,12 +108,11 @@
 
     <ImageView
         android:id="@+id/imgForground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/spaceship_animation"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBackground"
         app:layout_constraintEnd_toEndOf="@+id/imgBackground"
         app:layout_constraintStart_toStartOf="@+id/imgBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/spaceship_animation" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
