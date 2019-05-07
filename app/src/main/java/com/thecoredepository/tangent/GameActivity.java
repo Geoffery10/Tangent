@@ -121,6 +121,46 @@ public class GameActivity extends AppCompatActivity
         Log.i("Tree", "Assigning Values");
         name.setText(storyObject.getCharName());
         body.setText(storyObject.getSpeech());
+
+        Log.i("Tree", "Continue True = " + storyObject.getContinueTrue());
+        if (storyObject.getContinueTrue())
+        {
+            btnContinue.setEnabled(true);
+            btnContinue.setVisibility(View.VISIBLE);
+            btnOptionA.setEnabled(false);
+            btnOptionA.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            btnContinue.setEnabled(false);
+            btnContinue.setVisibility(View.INVISIBLE);
+
+            if (!storyObject.getOptionA().equals(""))
+            {
+                btnOptionA.setText(storyObject.getOptionA());
+                btnOptionA.setEnabled(true);
+                btnOptionA.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                Log.i("Tree", "OptionA was empty");
+                btnOptionA.setEnabled(false);
+                btnOptionA.setVisibility(View.INVISIBLE);
+            }
+        }
+
+        if (!storyObject.getOptionB().equals(""))
+        {
+            btnOptionB.setText(storyObject.getOptionB());
+            btnOptionB.setEnabled(true);
+            btnOptionB.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            Log.i("Tree", "OptionB was empty");
+            btnOptionB.setEnabled(false);
+            btnOptionB.setVisibility(View.INVISIBLE);
+        }
     }
 
     //=====================================================================
