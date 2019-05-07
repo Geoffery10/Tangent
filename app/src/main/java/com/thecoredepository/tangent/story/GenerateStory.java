@@ -1,5 +1,10 @@
 package com.thecoredepository.tangent.story;
 
+//This class generates the StoryObject array.
+//This array houses the entire story as StoryObjects.
+//Adding to the story is as simple as adding a new StoryObject
+//and defining its properties.
+
 import android.util.Log;
 
 import com.thecoredepository.tangent.story.StoryObject;
@@ -12,6 +17,7 @@ public class GenerateStory
 
     public void generateStory()
     {
+        //All of these properties should be used
         String key;
         int background;
         int forground;

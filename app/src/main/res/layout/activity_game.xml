@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="@+id/txtBody" />
 
     <ImageView
-        android:id="@+id/imgForground"
+        android:id="@+id/imgForeground"
         android:layout_width="411dp"
         android:layout_height="411dp"
         android:background="@drawable/spaceship_animation"

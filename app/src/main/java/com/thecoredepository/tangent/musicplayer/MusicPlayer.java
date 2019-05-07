@@ -1,5 +1,12 @@
 package com.thecoredepository.tangent.musicplayer;
 
+//This class runs all the music and sound for the program.
+//Calling the music player allows you to stopPlaying(),
+//stopPlayingMusic(), or stopPlayingSound() to end a track.
+//You can start a track by calling startPlaying() with the raw track
+//and whether its loopingTrue and if it is a sound vs a music track.
+//startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
+
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.annotation.RawRes;

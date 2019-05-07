@@ -1,10 +1,14 @@
 package com.thecoredepository.tangent.story;
 
+//This class determines what information a story node holds.
+//This is used for determining what text, images, and sounds
+//should be displayed for each part of the story.
+
 public class StoryObject
 {
     private String key;
     private int background;
-    private int forground;
+    private int foreground;
     private int music;
     private int sound;
     private String charName;
@@ -15,11 +19,11 @@ public class StoryObject
     private String leftChild;
     private String rightChild;
 
-    StoryObject(String key, int background, int forground, int music, int sound, String charName, String speech, Boolean continueTrue, String optionA, String optionB, String leftChild, String rightChild)
+    StoryObject(String key, int background, int foreground, int music, int sound, String charName, String speech, Boolean continueTrue, String optionA, String optionB, String leftChild, String rightChild)
     {
         this.key = key;
         this.background = background;
-        this.forground = forground;
+        this.foreground = foreground;
         this.music = music;
         this.sound = sound;
         this.charName = charName;
@@ -47,12 +51,12 @@ public class StoryObject
         this.background = background;
     }
 
-    public int getForground() {
-        return forground;
+    public int getForeground() {
+        return foreground;
     }
 
-    public void setForground(int forground) {
-        this.forground = forground;
+    public void setForeground(int forground) {
+        this.foreground = forground;
     }
 
     public int getMusic() {

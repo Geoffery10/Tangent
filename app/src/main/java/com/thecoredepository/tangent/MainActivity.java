@@ -1,5 +1,8 @@
 package com.thecoredepository.tangent;
 
+//This is the main class the launches with the program.
+//From here you can access other activities.
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;

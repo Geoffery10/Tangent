@@ -1,5 +1,11 @@
 package com.thecoredepository.tangent;
 
+//This class runs the game window.
+//It loads the layout, animations, images, and sounds as well as generating the story.
+//Button presses progress the story and update the elements.
+//Upon adding new images or sound to the story the setBackground(), setForeground(), setMusic(),
+//and setSound should be updated.
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -24,13 +30,14 @@ import com.thecoredepository.tangent.story.*;
 public class GameActivity extends AppCompatActivity
 {
     MusicPlayer musicPlayer = new MusicPlayer();
-    AnimationDrawable animForground;
+    AnimationDrawable animForeground;
     AnimationDrawable animBackground;
 
     Button btnContinue;
     Button btnOptionA;
     Button btnOptionB;
 
+    //Story is generated
     GenerateStory story = new GenerateStory();
     StoryObject storyObject;
 
@@ -106,7 +113,7 @@ public class GameActivity extends AppCompatActivity
     public void loadUI(StoryObject storyObject)
     {
         setBackground();
-        setForground();
+        setForeground();
         setMusic();
         setSound();
 
@@ -162,6 +169,20 @@ public class GameActivity extends AppCompatActivity
         }
     }
 
+    //=================================================================
+    //            ASSIGN BACKGROUNDS AND ForegroundS HERE
+    //=================================================================
+    //Assign New Images an ID
+    //i.e. 
+    //  case 0:
+    //      imgBackground.setBackgroundResource(R.drawable.background_0_space);
+    //      break;
+    //case 0 <=> background_0_name 
+    
+    //Animated backgrounds use this after the normal assignment: 
+    //animBackground = (AnimationDrawable) imgBackground.getBackground();
+    //animBackground.start();
+    
     public void setBackground()
     {
         ImageView imgBackground = findViewById(R.id.imgBackground);
@@ -193,23 +214,27 @@ public class GameActivity extends AppCompatActivity
         }
     }
 
-    public void setForground()
+    public void setForeground()
     {
-        ImageView imgForground = findViewById(R.id.imgForground);
+        ImageView imgForeground = findViewById(R.id.imgForeground);
 
-        Log.i("Tree", "fgID = " + storyObject.getForground());
-        switch (storyObject.getForground())
+        Log.i("Tree", "fgID = " + storyObject.getForeground());
+        switch (storyObject.getForeground())
         {
             default:
-                imgForground.setBackgroundResource(R.color.Blank);
+                imgForeground.setBackgroundResource(R.color.Blank);
                 break;
         }
     }
 
+    //=================================================================
+    //                BACKGROUNDS AND FOREGROUNDS END
+    //=================================================================
+
     public void setMusic()
     {
         musicPlayer.setApplicationContext(getApplicationContext());
-        boolean soundTrue = false;
+        final boolean soundTrue = false;
 
         Log.i("Tree", "musicID = " + storyObject.getMusic());
         switch (storyObject.getMusic())
@@ -231,7 +256,7 @@ public class GameActivity extends AppCompatActivity
     public void setSound()
     {
         musicPlayer.setApplicationContext(getApplicationContext());
-        boolean soundTrue = true;
+        final boolean soundTrue = true;
 
         Log.i("Tree", "soundID = " + storyObject.getSound());
         switch (storyObject.getMusic())
