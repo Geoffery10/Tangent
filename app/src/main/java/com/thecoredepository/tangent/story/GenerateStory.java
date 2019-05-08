@@ -225,6 +225,22 @@ public class GenerateStory
         StoryObject story6_2;
         storyArray.add(story6_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+		key = "6_3";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story6_3;
+        storyArray.add(story6_3 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 07==================================
 		key = "7_2";
@@ -268,18 +284,48 @@ public class GenerateStory
         sound = -1;
         charName = "Clerk";
         speechText = "I- I don't want any trouble.";
-        continueTrue = false;
+        continueTrue = true;
         optionA = "";
         optionB = "";
-        leftChild = "";
+        leftChild = "10_2";
         rightChild = "";
         StoryObject story9_2;
         storyArray.add(story9_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 10==================================
+		key = "10_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName;
+        speechText = "In the bag.";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "11_2";
+        rightChild = "";
+        StoryObject story10_2;
+        storyArray.add(story10_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 11==================================
+		key = "11_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName;
+        speechText = "";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story11_2;
+        storyArray.add(story11_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 12==================================
 		
