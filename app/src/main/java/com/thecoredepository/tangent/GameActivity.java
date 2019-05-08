@@ -26,9 +26,11 @@ import android.widget.Toast;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 import com.thecoredepository.tangent.story.*;
+import com.thecoredepository.tangent.PlayerData;
 
 public class GameActivity extends AppCompatActivity
 {
+    public final PlayerData saveData = new PlayerData();
     MusicPlayer musicPlayer = new MusicPlayer();
     AnimationDrawable animForeground;
     AnimationDrawable animBackground;
@@ -46,6 +48,7 @@ public class GameActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        Log.d("startedActivity", "GameActivity.class");
 
         musicPlayer.setApplicationContext(getApplicationContext());
 
@@ -55,7 +58,9 @@ public class GameActivity extends AppCompatActivity
 
         //Load Story
         story.generateStory();
-        storyObject = story.getStoryByID("0_1");
+        saveData.loadData(getApplicationContext());
+        Log.d("Load Story", "saveData.getLastKey() - " + saveData.getLastKey());
+        storyObject = story.getStoryByID(saveData.getLastKey()+"");
 
         //Load UI
         //startAnimations();
@@ -74,6 +79,8 @@ public class GameActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(), MainActivity.class);
                 musicPlayer.stopPlayingGameMusic();
+                saveData.setLastKey(storyObject.getKey());
+                saveData.saveData(getApplicationContext());
                 startActivity(in);
             }
         });
@@ -86,6 +93,8 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
+                saveData.setLastKey(storyObject.getKey());
+                saveData.saveData(getApplicationContext());
             }
         });
 
@@ -97,6 +106,8 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
+                saveData.setLastKey(storyObject.getKey());
+                saveData.saveData(getApplicationContext());
             }
         });
 
@@ -108,6 +119,8 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
+                saveData.setLastKey(storyObject.getKey());
+                saveData.saveData(getApplicationContext());
             }
         });
 
@@ -220,6 +233,10 @@ public class GameActivity extends AppCompatActivity
             case 4:
                 imgBackground.setBackgroundResource(R.drawable.background_4_messyroom);
                 break;
+            case 5:
+                imgBackground.setBackgroundResource(R.drawable.background_5_gunshotstore);
+                animBackground = (AnimationDrawable) imgBackground.getBackground();
+                animBackground.start();
             default:
                 imgBackground.setBackgroundResource(R.color.colorPrimaryDark);
                 break;

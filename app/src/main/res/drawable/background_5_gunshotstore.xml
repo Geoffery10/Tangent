@@ -12,5 +12,5 @@
 	<item android:drawable="@drawable/background_3_8storefront" android:duration="100" />
 	<item android:drawable="@drawable/background_3_9storefront" android:duration="100" />
 	<item android:drawable="@drawable/background_3_10storefront" android:duration="100" />
-	<item android:drawable="@drawable/background_3storefront" android:duration="100" />
+	<item android:drawable="@drawable/background_3_storefront" android:duration="100" />
 </animation-list>
