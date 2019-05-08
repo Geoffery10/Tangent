@@ -346,7 +346,7 @@ public class GenerateStory
 		
 		//=============================STAGE 13==================================
 		key = "13_2";
-        background = -1;
+        background = 3;
         forground = -1;
         music = -1;
         sound = -1;
@@ -379,7 +379,7 @@ public class GenerateStory
 		
 		//=============================STAGE 14==================================
 		key = "14_2";
-        background = -1;
+        background = 5;
         forground = -1;
         music = -1;
         sound = -1;
@@ -396,7 +396,7 @@ public class GenerateStory
 				
 		//=============================STAGE 15==================================
 		key = "15_2";
-        background = -1;
+        background = 3;
         forground = -1;
         music = -1;
         sound = -1;
