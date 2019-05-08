@@ -59,8 +59,8 @@ public class GameActivity extends AppCompatActivity
         //Load Story
         story.generateStory();
         saveData.loadData(getApplicationContext());
-        Log.d("Load Story", "saveData.getLastKey() - " + saveData.getLastKey());
-        storyObject = story.getStoryByID(saveData.getLastKey()+"");
+        Log.d("Load Story", "saveData.getLastKey() - " + saveData.lastKey);
+        storyObject = story.getStoryByID(saveData.lastKey+"");
 
         //Load UI
         //startAnimations();
@@ -79,7 +79,7 @@ public class GameActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(), MainActivity.class);
                 musicPlayer.stopPlayingGameMusic();
-                saveData.setLastKey(storyObject.getKey());
+                saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
                 startActivity(in);
             }
@@ -93,7 +93,7 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
-                saveData.setLastKey(storyObject.getKey());
+                saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
             }
         });
@@ -106,7 +106,7 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
-                saveData.setLastKey(storyObject.getKey());
+                saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
             }
         });
@@ -119,7 +119,7 @@ public class GameActivity extends AppCompatActivity
                 loadUI(storyObject);
                 setMusic();
                 setSound();
-                saveData.setLastKey(storyObject.getKey());
+                saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
             }
         });

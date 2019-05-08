@@ -32,10 +32,10 @@ public class NewContinueActivity extends AppCompatActivity
         //If the save was loaded add the continue option
         boolean loadedSaveTrue = false;
         saveData.loadData(getApplicationContext());
-        if (!saveData.getLastKey().equals("0_1"))
+        if (!saveData.lastKey.equals("0_1"))
         {
             loadedSaveTrue = true;
-            txtPlayerName.setText(saveData.getPlayerName());
+            txtPlayerName.setText(saveData.playerName);
         }
 
         //=================================================================

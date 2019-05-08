@@ -21,8 +21,8 @@ public class PlayerData
 
     //Properties for Tangent 1
 
-    private String lastKey;
-    private String playerName;
+    String lastKey;
+    String playerName;
 
     public void playerData()
     {
@@ -71,25 +71,5 @@ public class PlayerData
         Log.d("PlayerData", "Saved");
         Log.d("PlayerData", "Key - " + key);
         Log.d("PlayerData", "PlayerName - " + name);
-    }
-
-    public String getLastKey()
-    {
-        return lastKey;
-    }
-
-    public void setLastKey(String lastKey)
-    {
-        this.lastKey = lastKey;
-    }
-
-    public String getPlayerName()
-    {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName)
-    {
-        this.playerName = playerName;
     }
 }
