@@ -261,7 +261,7 @@ public class GenerateStory
 		
 		//=============================STAGE 08==================================
 		key = "8_2";
-        background = -1;
+        background = 3;
         forground = -1;
         music = -1;
         sound = -1;
@@ -295,7 +295,7 @@ public class GenerateStory
 		
 		//=============================STAGE 10==================================
 		key = "10_2";
-        background = -1;
+        background = 3;
         forground = -1;
         music = -1;
         sound = -1;
@@ -329,7 +329,7 @@ public class GenerateStory
 		
 		//=============================STAGE 12==================================
 		key = "12_2";
-        background = -1;
+        background = 3;
         forground = -1;
         music = -1;
         sound = -1;
