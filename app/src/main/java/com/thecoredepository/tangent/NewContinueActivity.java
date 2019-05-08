@@ -19,9 +19,12 @@ public class NewContinueActivity extends AppCompatActivity
         setContentView(R.layout.activity_new_continue);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        //If the save was loaded add the continue option
+        boolean loadedSaveTrue = false;
 
         TextView txtVersion = findViewById(R.id.txtVersion2);
         txtVersion.setText("Version: " + BuildConfig.VERSION_NAME);
+        TextView txtContinue = findViewById(R.id.txtContinue);
         final TextView txtPlayerName = findViewById(R.id.txtPlayerName);
 
         //=================================================================
@@ -29,15 +32,31 @@ public class NewContinueActivity extends AppCompatActivity
         //=================================================================
 
         Button btnNew = findViewById(R.id.btnNew);
+        Button btnContinue =findViewById(R.id.btnContinue);
+
+        if(loadedSaveTrue == false)
+        {
+            txtContinue.setVisibility(View.INVISIBLE);
+            btnContinue.setVisibility(View.INVISIBLE);
+            btnContinue.setEnabled(false);
+        }
+        else
+        {
+            txtContinue.setVisibility(View.VISIBLE);
+            btnContinue.setVisibility(View.VISIBLE);
+            btnContinue.setEnabled(true);
+        }
 
         btnNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Starts Game
+                String playerName = txtPlayerName.getText()+"";
                 Intent in = new Intent(getApplicationContext(), GameActivity.class);
-                GenerateStory.player.setPlayerName(txtPlayerName.getText()+"");
-                Log.d("New_Game", "Set Player Name To - " + txtPlayerName.getText()+"");
-                Log.d("New_Game", "GenerateStory.player.getPlayerName - " + GenerateStory.player.getPlayerName());
+                if (!playerName.equals(""))
+                {
+                    GenerateStory.player.setPlayerName(txtPlayerName.getText()+"");
+                }
                 startActivity(in);
             }
         });
