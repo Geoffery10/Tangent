@@ -133,10 +133,10 @@ public class GenerateStory
         speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going" +
                 " to take my fate in my own hands.";
         continueTrue = false;
-        optionA = "";
-        optionB = "";
-        leftChild = "";
-        rightChild = "";
+        optionA = "Buy a weapon.";
+        optionB = "Try to work on a starship.";
+        leftChild = "4_2";
+        rightChild = "4_3";
         StoryObject story3_2;
         storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
