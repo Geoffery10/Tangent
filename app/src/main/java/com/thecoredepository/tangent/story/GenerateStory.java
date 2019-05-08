@@ -300,7 +300,7 @@ public class GenerateStory
         forground = -1;
         music = -1;
         sound = -1;
-        charName = player.getPlayerName;
+        charName = player.getPlayerName();
         speechText = "In the bag.";
         continueTrue = true;
         optionA = "";
@@ -317,22 +317,100 @@ public class GenerateStory
         forground = -1;
         music = -1;
         sound = -1;
-        charName = player.getPlayerName;
-        speechText = "";
-        continueTrue = false;
+        charName = "Clerk";
+        speechText = "Th- that's today's balance.";
+        continueTrue = true;
         optionA = "";
         optionB = "";
-        leftChild = "";
+        leftChild = "12_2";
         rightChild = "";
         StoryObject story11_2;
         storyArray.add(story11_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 12==================================
+		key = "12_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "I need more.";
+        continueTrue = false;
+        optionA = "Shoot him and transfer it yourself.";
+        optionB = "Run.";
+        leftChild = "13_2";
+        rightChild = "13_3";
+        StoryObject story12_2;
+        storyArray.add(story12_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 13==================================
+		key = "13_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "14_2";
+        rightChild = "";
+        StoryObject story13_2;
+        storyArray.add(story13_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+		key = "13_3";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story13_3;
+        storyArray.add(story13_3 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 14==================================
+		key = "14_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "-insert gunshot sound here-";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "15_2";
+        rightChild = "";
+        StoryObject story14_2;
+        storyArray.add(story14_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+		//=============================STAGE 15==================================
+		key = "15_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "...";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story15_2;
+        storyArray.add(story15_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 
         //=====================================================================
