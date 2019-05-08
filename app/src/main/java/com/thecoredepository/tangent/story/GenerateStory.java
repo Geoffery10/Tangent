@@ -140,7 +140,7 @@ public class GenerateStory
         StoryObject story3_2;
         storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-        //end of current story arc 2
+        //end
 
         //=============================STAGE 04==================================
 		key = "4_1";
@@ -158,7 +158,135 @@ public class GenerateStory
         StoryObject story4_1;
         storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		//end of current story arc 1
+				
+		key = "4_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "5_2";
+        rightChild = "";
+        StoryObject story4_2;
+        storyArray.add(story4_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+		key = "4_3";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "I think I'll try the space industry...";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story4_3;
+        storyArray.add(story4_3 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+		//=============================STAGE 05==================================
+		key = "5_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "I need... ";
+        continueTrue = false;
+        optionA = "... just enough to get back on my feet";
+        optionB = "... enough to live comfortably.";
+        leftChild = "6_2";
+        rightChild = "6_3";
+        StoryObject story5_2;
+        storyArray.add(story5_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+				
+
+		//=============================STAGE 06==================================
+		key = "6_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "27 hours huh...";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "7_2";
+        rightChild = "";
+        StoryObject story6_2;
+        storyArray.add(story6_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		//=============================STAGE 07==================================
+		key = "7_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "Go time.";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "8_2";
+        rightChild = "";
+        StoryObject story7_2;
+        storyArray.add(story7_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		//=============================STAGE 08==================================
+		key = "8_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = "Clerk";
+        speechText = "Hello! Did you find everything alright? There's a thirty percent discount if you have a Company Card.";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "9_2";
+        rightChild = "";
+        StoryObject story8_2;
+        storyArray.add(story8_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		//=============================STAGE 09==================================
+		key = "9_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = "Clerk";
+        speechText = "I- I don't want any trouble.";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story9_2;
+        storyArray.add(story9_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+		
+		//=============================STAGE 10==================================
+		
+		//=============================STAGE 11==================================
+		
+		//=============================STAGE 12==================================
+		
+		//=============================STAGE 13==================================
+		
+		//=============================STAGE 14==================================
+		
 
         //=====================================================================
         //                         STORY DATA END
