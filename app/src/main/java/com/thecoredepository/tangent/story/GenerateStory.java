@@ -108,7 +108,7 @@ public class GenerateStory
 
         //=============================STAGE 03==================================
 		key = "3_1";
-        background = -1;
+        background = 4;
         forground = -1;
         music = -1;
         sound = -1;
@@ -125,7 +125,7 @@ public class GenerateStory
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
         key = "3_2";
-        background = -1;
+        background = 2;
         forground = -1;
         music = -1;
         sound = -1;
