@@ -60,6 +60,8 @@ public class GameActivity extends AppCompatActivity
         //Load UI
         //startAnimations();
         loadUI(storyObject);
+        setMusic();
+        setSound();
 
         //=================================================================
         //                           BUTTONS
@@ -71,7 +73,7 @@ public class GameActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(), MainActivity.class);
-                musicPlayer.stopPlaying();
+                musicPlayer.stopPlayingGameMusic();
                 startActivity(in);
             }
         });
@@ -82,6 +84,8 @@ public class GameActivity extends AppCompatActivity
                 String key = storyObject.getLeftChild();
                 storyObject = story.getStoryByID(key);
                 loadUI(storyObject);
+                setMusic();
+                setSound();
             }
         });
 
@@ -91,6 +95,8 @@ public class GameActivity extends AppCompatActivity
                 String key = storyObject.getLeftChild();
                 storyObject = story.getStoryByID(key);
                 loadUI(storyObject);
+                setMusic();
+                setSound();
             }
         });
 
@@ -100,6 +106,8 @@ public class GameActivity extends AppCompatActivity
                 String key = storyObject.getRightChild();
                 storyObject = story.getStoryByID(key);
                 loadUI(storyObject);
+                setMusic();
+                setSound();
             }
         });
 
@@ -114,8 +122,6 @@ public class GameActivity extends AppCompatActivity
     {
         setBackground();
         setForeground();
-        setMusic();
-        setSound();
 
         Log.i("Tree", "Loading UI");
         TextView name = findViewById(R.id.txtName);
@@ -233,22 +239,25 @@ public class GameActivity extends AppCompatActivity
 
     public void setMusic()
     {
-        musicPlayer.setApplicationContext(getApplicationContext());
         final boolean soundTrue = false;
 
         Log.i("Tree", "musicID = " + storyObject.getMusic());
         switch (storyObject.getMusic())
         {
-            case 0:
+            case -1:
 
                 break;
+            case 0:
+                musicPlayer.startPlayingGameMusic(R.raw.intro);
+                break;
             case 1:
-                musicPlayer.startPlaying(R.raw.cyoa01smallfinal, true, soundTrue);
+                musicPlayer.startPlayingGameMusic(R.raw.cyoa01smallfinal);
                 break;
             case 2:
-                musicPlayer.startPlaying(R.raw.intro, true, soundTrue);
+                musicPlayer.startPlayingGameMusic(R.raw.music_2_awakening);
+                break;
             default:
-                musicPlayer.stopPlaying();
+                musicPlayer.stopPlayingGameMusic();
                 break;
         }
     }

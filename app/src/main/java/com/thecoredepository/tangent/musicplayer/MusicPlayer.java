@@ -15,6 +15,7 @@ import android.util.Log;
 public final class MusicPlayer
 {
     private MediaPlayer musicPlayer;
+    private MediaPlayer inGameMusic;
     private MediaPlayer soundPlayer;
     private Context context;
 
@@ -62,25 +63,46 @@ public final class MusicPlayer
         }
     }
 
+    public void startPlayingGameMusic(@RawRes int sound)
+    {
+        Log.i("Player", "STOP");
+        stopPlayingMusic();
+        inGameMusic = MediaPlayer.create(context, sound);
+        inGameMusic.start();
+        inGameMusic.setLooping(true);
+        Log.i("Player", "START = " + sound);
+    }
+
+    public void stopPlayingGameMusic()
+    {
+        if (inGameMusic != null)
+        {
+            inGameMusic.reset();
+            inGameMusic.stop();
+            inGameMusic.release();
+            inGameMusic=null;
+        }
+    }
+
     public void startPlaying(@RawRes int sound, boolean loopingTrue, boolean soundTrue)
     {
         if (soundTrue == true)
         {
-            Log.i("Sound Player", "STOP");
+            Log.i("Player", "STOP");
             stopPlayingSound();
             soundPlayer = MediaPlayer.create(context, sound);
             soundPlayer.start();
             soundPlayer.setLooping(loopingTrue);
-            Log.i("Sound Player", "START = " + sound);
+            Log.i("layer", "START = " + sound);
         }
         if (soundTrue == false)
         {
-            Log.i("Sound Player", "STOP");
+            Log.i("Player", "STOP");
             stopPlayingMusic();
             musicPlayer = MediaPlayer.create(context, sound);
             musicPlayer.start();
             musicPlayer.setLooping(loopingTrue);
-            Log.i("Sound Player", "START = " + sound);
+            Log.i("Player", "START = " + sound);
         }
 
     }

@@ -75,7 +75,7 @@ public class GenerateStory
 		key = "1_1";
         background = 2;
         forground = -1;
-        music = 0;
+        music = -1;
         sound = -1;
         charName = player.getPlayerName();
         speechText = "...";
@@ -93,7 +93,7 @@ public class GenerateStory
 		key = "2_1";
         background = 2;
         forground = -1;
-        music = 0;
+        music = -1;
         sound = -1;
         charName = player.getPlayerName();
         speechText = "Ok... Well I hated that place anyway. Question is, what do I do now?";

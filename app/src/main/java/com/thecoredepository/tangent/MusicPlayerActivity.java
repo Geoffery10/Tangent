@@ -39,6 +39,7 @@ public class MusicPlayerActivity extends AppCompatActivity
 
         Button btnMainTheme = findViewById(R.id.musicBtn_MainTheme);
         Button btnTheCoreDespositoryTheme = findViewById(R.id.musicBtn_TCDT);
+        Button btnAwakening = findViewById(R.id.musicBtn_awakening);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +68,13 @@ public class MusicPlayerActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 musicPlayer.startPlaying(R.raw.intro, true, false);
+            }
+        });
+
+        btnAwakening.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicPlayer.startPlaying(R.raw.music_2_awakening, true, false);
             }
         });
 
