@@ -214,6 +214,12 @@ public class GameActivity extends AppCompatActivity
                 animBackground = (AnimationDrawable) imgBackground.getBackground();
                 animBackground.start();
                 break;
+            case 3:
+                imgBackground.setBackgroundResource(R.drawable.background_2_computer);
+                break;
+            case 4:
+                imgBackground.setBackgroundResource(R.drawable.background_4_messyroom);
+                break;
             default:
                 imgBackground.setBackgroundResource(R.color.colorPrimaryDark);
                 break;
