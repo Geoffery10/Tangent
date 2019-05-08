@@ -382,9 +382,9 @@ public class GenerateStory
         background = 5;
         forground = -1;
         music = -1;
-        sound = -1;
+        sound = 1;
         charName = player.getPlayerName();
-        speechText = "-insert gunshot sound here-";
+        speechText = "";
         continueTrue = true;
         optionA = "";
         optionB = "";
