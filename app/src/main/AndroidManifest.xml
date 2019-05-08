@@ -28,6 +28,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
         <activity
+            android:name=".NewContinueActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
             android:name=".GameActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>

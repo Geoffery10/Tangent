@@ -21,7 +21,7 @@ import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
 public class MainActivity extends AppCompatActivity
 {
-    MusicPlayer musicPlayer = new MusicPlayer();
+    public static MusicPlayer musicPlayer = new MusicPlayer();
 
     AnimationDrawable animSpaceship;
     AnimationDrawable animStarField;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Starts Game
-                Intent in = new Intent(getApplicationContext(), GameActivity.class);
+                Intent in = new Intent(getApplicationContext(), NewContinueActivity.class);
                 musicPlayer.stopPlaying();
                 startActivity(in);
             }

@@ -15,7 +15,8 @@ import com.thecoredepository.tangent.story.PlayerObject;
 public class GenerateStory
 {
     ArrayList<StoryObject> storyArray = new ArrayList<StoryObject>();
-
+    public static PlayerObject player = new PlayerObject();
+    
     public void generateStory()
     {
         //All of these properties should be used
