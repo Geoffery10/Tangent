@@ -59,8 +59,8 @@ public class GameActivity extends AppCompatActivity
         //Load Story
         story.generateStory();
         saveData.loadData(getApplicationContext());
-        Log.d("Load Story", "saveData.getLastKey() - " + saveData.lastKey);
-        storyObject = story.getStoryByID(saveData.lastKey+"");
+        Log.d("Load Story", "saveData.lastKey - " + saveData.lastKey);
+        storyObject = story.getStoryByID("0_1");
 
         //Load UI
         //startAnimations();
@@ -95,6 +95,7 @@ public class GameActivity extends AppCompatActivity
                 setSound();
                 saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
+                Log.d("Save Story", "saveData.lastKey - " + saveData.lastKey);
             }
         });
 
@@ -108,6 +109,7 @@ public class GameActivity extends AppCompatActivity
                 setSound();
                 saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
+                Log.d("Save Story", "saveData.lastKey - " + saveData.lastKey);
             }
         });
 
@@ -121,6 +123,7 @@ public class GameActivity extends AppCompatActivity
                 setSound();
                 saveData.lastKey = storyObject.getKey();
                 saveData.saveData(getApplicationContext());
+                Log.d("Save Story", "saveData.lastKey - " + saveData.lastKey);
             }
         });
 

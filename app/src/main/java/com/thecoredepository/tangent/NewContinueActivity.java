@@ -37,6 +37,7 @@ public class NewContinueActivity extends AppCompatActivity
             loadedSaveTrue = true;
             txtPlayerName.setText(saveData.playerName);
         }
+        Log.d("PlayerData", "loadSaveTrue = " + loadedSaveTrue);
 
         //=================================================================
         //                           BUTTONS
@@ -66,6 +67,7 @@ public class NewContinueActivity extends AppCompatActivity
                 Intent in = new Intent(getApplicationContext(), GameActivity.class);
                 if (!playerName.equals(""))
                 {
+                    Log.d("PlayerData", "playerName = " + playerName);
                     GenerateStory.player.setPlayerName(playerName);
                     saveData.saveData(getApplicationContext(), "0_1", playerName);
                 }
