@@ -53,8 +53,8 @@ public class GenerateStory
         //rightChild equals "" unless there us an option B
 
         //===============================ROOT====================================
+        //=============================STAGE 00==================================
         //This is the root of the story.
-        //index: 0
         key = "0_1";
         background = 1;
         forground = -1;
@@ -71,7 +71,7 @@ public class GenerateStory
         storyArray.add(story0_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
-        //index: 1
+        //=============================STAGE 01==================================
 		key = "1_1";
         background = 2;
         forground = -1;
@@ -89,7 +89,7 @@ public class GenerateStory
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
         //Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
 
-        //index: 2
+        //=============================STAGE 02==================================
 		key = "2_1";
         background = 2;
         forground = -1;
@@ -106,7 +106,7 @@ public class GenerateStory
         storyArray.add(story2_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
-        //index: 3
+        //=============================STAGE 03==================================
 		key = "3_1";
         background = -1;
         forground = -1;
@@ -124,7 +124,25 @@ public class GenerateStory
         storyArray.add(story3_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
-        //index: 4
+        key = "3_2";
+        background = -1;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going" +
+                " to take my fate in my own hands.";
+        continueTrue = false;
+        optionA = "";
+        optionB = "";
+        leftChild = "";
+        rightChild = "";
+        StoryObject story3_2;
+        storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+        //end of current story arc 2
+
+        //=============================STAGE 04==================================
 		key = "4_1";
         background = -1;
         forground = -1;
@@ -141,25 +159,6 @@ public class GenerateStory
         storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		//end of current story arc 1
-
-        //index: 5
-		key = "3_2";
-        background = -1;
-        forground = -1;
-        music = -1;
-        sound = -1;
-        charName = player.getPlayerName();
-        speechText = "You know what? I'm done. I'm sick of doing things the 'Right' way. I'm going" +
-                " to take my fate in my own hands.";
-        continueTrue = false;
-        optionA = "";
-        optionB = "";
-        leftChild = "";
-        rightChild = "";
-        StoryObject story3_2;
-        storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
-                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-		//end of current story arc 2
 
         //=====================================================================
         //                         STORY DATA END
