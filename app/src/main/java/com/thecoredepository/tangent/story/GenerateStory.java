@@ -20,7 +20,6 @@ public class GenerateStory
     public void generateStory()
     {
         //All of these properties should be used
-        PlayerObject player = new PlayerObject();
         String key;
         int background;
         int forground;

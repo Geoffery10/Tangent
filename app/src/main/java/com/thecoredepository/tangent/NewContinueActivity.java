@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,6 +36,8 @@ public class NewContinueActivity extends AppCompatActivity
                 //Starts Game
                 Intent in = new Intent(getApplicationContext(), GameActivity.class);
                 GenerateStory.player.setPlayerName(txtPlayerName.getText()+"");
+                Log.d("New_Game", "Set Player Name To - " + txtPlayerName.getText()+"");
+                Log.d("New_Game", "GenerateStory.player.getPlayerName - " + GenerateStory.player.getPlayerName());
                 startActivity(in);
             }
         });
