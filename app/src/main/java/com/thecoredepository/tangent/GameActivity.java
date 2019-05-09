@@ -246,6 +246,9 @@ public class GameActivity extends AppCompatActivity
                 animBackground = (AnimationDrawable) imgBackground.getBackground();
                 animBackground.start();
                 break;
+            case 6:
+                imgBackground.setBackgroundResource(R.drawable.background_6_gunstore);
+                break;
             default:
                 imgBackground.setBackgroundResource(R.color.colorPrimaryDark);
                 break;
