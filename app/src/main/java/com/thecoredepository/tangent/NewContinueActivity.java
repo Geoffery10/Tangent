@@ -75,5 +75,19 @@ public class NewContinueActivity extends AppCompatActivity
                 startActivity(in);
             }
         });
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Load Last Game
+                saveData.loadData(getApplicationContext());
+                String playerName = saveData.playerName;
+                Intent in = new Intent(getApplicationContext(), GameActivity.class);
+                Log.d("PlayerData", "playerName = " + playerName);
+                GenerateStory.player.setPlayerName(playerName);
+                Log.d("startingActivity", "GameActivity.class");
+                startActivity(in);
+            }
+        });
     }
 }

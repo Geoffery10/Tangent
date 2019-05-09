@@ -67,7 +67,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "1_1";
         rightChild = "";
-        StoryObject story0_1;
+        StoryObject story0_1 = new StoryObject();
         storyArray.add(story0_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
@@ -84,7 +84,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "2_1";
         rightChild = "";
-        StoryObject story1_1;
+        StoryObject story1_1 = new StoryObject();
         storyArray.add(story1_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
         //Scene shows computer monitor with message from Mrs. Fumb - "You. Are. Fired."
@@ -102,7 +102,7 @@ public class GenerateStory
         optionB = "I've had enough. (Do something drastic)";
         leftChild = "3_1";
         rightChild = "3_2";
-        StoryObject story2_1;
+        StoryObject story2_1 = new StoryObject();
         storyArray.add(story2_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
@@ -120,7 +120,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "4_1";
         rightChild = "";
-        StoryObject story3_1;
+        StoryObject story3_1 = new StoryObject();
         storyArray.add(story3_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
@@ -137,7 +137,7 @@ public class GenerateStory
         optionB = "Try to work on a starship.";
         leftChild = "4_2";
         rightChild = "4_3";
-        StoryObject story3_2;
+        StoryObject story3_2 = new StoryObject();
         storyArray.add(story3_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
         //end
@@ -155,7 +155,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "";
         rightChild = "";
-        StoryObject story4_1;
+        StoryObject story4_1 = new StoryObject();
         storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -171,7 +171,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "5_2";
         rightChild = "";
-        StoryObject story4_2;
+        StoryObject story4_2 = new StoryObject();
         storyArray.add(story4_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -187,7 +187,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "";
         rightChild = "";
-        StoryObject story4_3;
+        StoryObject story4_3 = new StoryObject();
         storyArray.add(story4_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -204,7 +204,7 @@ public class GenerateStory
         optionB = "... enough to live comfortably.";
         leftChild = "6_2";
         rightChild = "6_3";
-        StoryObject story5_2;
+        StoryObject story5_2 = new StoryObject();
         storyArray.add(story5_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -222,7 +222,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "7_2";
         rightChild = "";
-        StoryObject story6_2;
+        StoryObject story6_2 = new StoryObject();
         storyArray.add(story6_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -238,7 +238,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "";
         rightChild = "";
-        StoryObject story6_3;
+        StoryObject story6_3 = new StoryObject();
         storyArray.add(story6_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -255,7 +255,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "8_2";
         rightChild = "";
-        StoryObject story7_2;
+        StoryObject story7_2 = new StoryObject();
         storyArray.add(story7_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -272,7 +272,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "9_2";
         rightChild = "";
-        StoryObject story8_2;
+        StoryObject story8_2 = new StoryObject();
         storyArray.add(story8_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -289,7 +289,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "10_2";
         rightChild = "";
-        StoryObject story9_2;
+        StoryObject story9_2 = new StoryObject();
         storyArray.add(story9_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -306,7 +306,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "11_2";
         rightChild = "";
-        StoryObject story10_2;
+        StoryObject story10_2 = new StoryObject();
         storyArray.add(story10_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -323,7 +323,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "12_2";
         rightChild = "";
-        StoryObject story11_2;
+        StoryObject story11_2 = new StoryObject();
         storyArray.add(story11_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -340,7 +340,7 @@ public class GenerateStory
         optionB = "Run.";
         leftChild = "13_2";
         rightChild = "13_3";
-        StoryObject story12_2;
+        StoryObject story12_2 = new StoryObject();
         storyArray.add(story12_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -357,7 +357,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "14_2";
         rightChild = "";
-        StoryObject story13_2;
+        StoryObject story13_2 = new StoryObject();
         storyArray.add(story13_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -373,7 +373,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "";
         rightChild = "";
-        StoryObject story13_3;
+        StoryObject story13_3 = new StoryObject();
         storyArray.add(story13_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
@@ -390,7 +390,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "15_2";
         rightChild = "";
-        StoryObject story14_2;
+        StoryObject story14_2 = new StoryObject();
         storyArray.add(story14_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
@@ -407,7 +407,7 @@ public class GenerateStory
         optionB = "";
         leftChild = "";
         rightChild = "";
-        StoryObject story15_2;
+        StoryObject story15_2 = new StoryObject();
         storyArray.add(story15_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		

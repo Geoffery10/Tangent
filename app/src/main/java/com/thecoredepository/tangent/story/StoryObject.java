@@ -35,6 +35,28 @@ public class StoryObject
         this.rightChild = rightChild;
     }
 
+    StoryObject()
+    {
+        this.key = "0_1";
+        this.background = -1;
+        this.foreground = -1;
+        this.music = -1;
+        this.sound = -1;
+        this.charName = "DEFAULT";
+        this.speech = "TEXT";
+        this.continueTrue = true;
+        this.optionA = "";
+        this.optionB = "";
+        this.leftChild = "1_1";
+        this.rightChild = "";
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Key - " + getKey() + "\nBG - " + getBackground() + "\nFG - " + getForeground();
+    }
+
     public String getKey() {
         return key;
     }

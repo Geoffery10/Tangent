@@ -31,6 +31,7 @@ import com.thecoredepository.tangent.PlayerData;
 public class GameActivity extends AppCompatActivity
 {
     public final PlayerData saveData = new PlayerData();
+    public String key = "0_1";
     MusicPlayer musicPlayer = new MusicPlayer();
     AnimationDrawable animForeground;
     AnimationDrawable animBackground;
@@ -48,7 +49,11 @@ public class GameActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        saveData.loadData(getApplicationContext());
         Log.d("startedActivity", "GameActivity.class");
+        Log.d("PlayerData", "GameActivity.class, Key = " + saveData.lastKey);
+        Log.d("PlayerData", "GameActivity.class, Name = " + saveData.playerName);
+        key = saveData.lastKey;
 
         musicPlayer.setApplicationContext(getApplicationContext());
 
@@ -59,11 +64,11 @@ public class GameActivity extends AppCompatActivity
         //Load Story
         story.generateStory();
         saveData.loadData(getApplicationContext());
-        Log.d("Load Story", "saveData.lastKey - " + saveData.lastKey);
         storyObject = story.getStoryByID("0_1");
 
         //Load UI
         //startAnimations();
+        //Log.d("loadUI", storyObject.toString());
         loadUI(storyObject);
         setMusic();
         setSound();
