@@ -2,15 +2,29 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="true">
     <item android:drawable="@drawable/background_3_storefront" android:duration="500" />
+	
     <item android:drawable="@drawable/background_3_1storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_2storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_3storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_4storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_5storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_6storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_7storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_8storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_9storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_10storefront" android:duration="100" />
+	
 	<item android:drawable="@drawable/background_3_storefront" android:duration="100" />
+	
+	
+	
 </animation-list>
