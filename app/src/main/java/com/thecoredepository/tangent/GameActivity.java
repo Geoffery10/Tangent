@@ -271,7 +271,6 @@ public class GameActivity extends AppCompatActivity
 
     public void setMusic()
     {
-        final boolean soundTrue = false;
 
         Log.i("Tree", "musicID = " + storyObject.getMusic());
         switch (storyObject.getMusic())
@@ -297,19 +296,18 @@ public class GameActivity extends AppCompatActivity
     public void setSound()
     {
         musicPlayer.setApplicationContext(getApplicationContext());
-        final boolean soundTrue = true;
 
         Log.i("Tree", "soundID = " + storyObject.getSound());
-        switch (storyObject.getMusic())
+        switch (storyObject.getSound())
         {
             case 0:
 
                 break;
             case 1:
-                musicPlayer.startPlaying(R.raw.rocket_thrusters, true, soundTrue);
+                musicPlayer.startPlayingGameSound(R.raw.rocket_thrusters, true);
                 break;
             case 2:
-                musicPlayer.startPlaying(R.raw.sound_2_gunshot, false, soundTrue);
+                musicPlayer.startPlayingGameSound(R.raw.sound_2_gunshot, false);
                 break;
             default:
                 musicPlayer.stopPlaying();

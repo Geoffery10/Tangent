@@ -382,7 +382,7 @@ public class GenerateStory
         background = 5;
         forground = -1;
         music = -1;
-        sound = 1;
+        sound = 2;
         charName = player.getPlayerName();
         speechText = "";
         continueTrue = true;

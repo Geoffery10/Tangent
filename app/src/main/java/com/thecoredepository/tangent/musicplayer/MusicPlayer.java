@@ -17,6 +17,7 @@ public final class MusicPlayer
     private MediaPlayer musicPlayer;
     private MediaPlayer inGameMusic;
     private MediaPlayer soundPlayer;
+    private MediaPlayer inGameSound;
     private Context context;
 
     //=====================================================================
@@ -81,6 +82,27 @@ public final class MusicPlayer
             inGameMusic.stop();
             inGameMusic.release();
             inGameMusic=null;
+        }
+    }
+
+    public void startPlayingGameSound(@RawRes int sound, boolean loopingTrue)
+    {
+        Log.i("Player", "STOP");
+        stopPlayingMusic();
+        inGameSound = MediaPlayer.create(context, sound);
+        inGameSound.start();
+        inGameSound.setLooping(loopingTrue);
+        Log.i("Player", "START = " + sound);
+    }
+
+    public void stopPlayingGameSound()
+    {
+        if (inGameMusic != null)
+        {
+            inGameSound.reset();
+            inGameSound.stop();
+            inGameSound.release();
+            inGameSound=null;
         }
     }
 
