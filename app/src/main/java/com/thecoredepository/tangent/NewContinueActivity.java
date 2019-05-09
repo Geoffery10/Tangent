@@ -35,8 +35,8 @@ public class NewContinueActivity extends AppCompatActivity
         if (!saveData.lastKey.equals("0_1"))
         {
             loadedSaveTrue = true;
-            txtPlayerName.setText(saveData.playerName);
         }
+        txtPlayerName.setText(saveData.playerName);
         Log.d("PlayerData", "loadSaveTrue = " + loadedSaveTrue);
 
         //=================================================================
