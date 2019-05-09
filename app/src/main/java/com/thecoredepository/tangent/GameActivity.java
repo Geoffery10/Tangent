@@ -245,6 +245,7 @@ public class GameActivity extends AppCompatActivity
                 imgBackground.setBackgroundResource(R.drawable.background_5_gunshotstore);
                 animBackground = (AnimationDrawable) imgBackground.getBackground();
                 animBackground.start();
+                break;
             default:
                 imgBackground.setBackgroundResource(R.color.colorPrimaryDark);
                 break;
@@ -306,6 +307,9 @@ public class GameActivity extends AppCompatActivity
                 break;
             case 1:
                 musicPlayer.startPlaying(R.raw.rocket_thrusters, true, soundTrue);
+                break;
+            case 2:
+                musicPlayer.startPlaying(R.raw.sound_2_gunshot, false, soundTrue);
                 break;
             default:
                 musicPlayer.stopPlaying();
