@@ -160,12 +160,12 @@ public class GenerateStory
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 				
 		key = "4_2";
-        background = -1;
+        background = 6;
         forground = -1;
         music = -1;
         sound = -1;
         charName = player.getPlayerName();
-        speechText = "";
+        speechText = "...";
         continueTrue = true;
         optionA = "";
         optionB = "";
