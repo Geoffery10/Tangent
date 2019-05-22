@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
 
         Button btnPlay = findViewById(R.id.btnPlay);
         Button btnMusicPlayer = findViewById(R.id.btnMusicPlayer);
+        Button btnStore = findViewById(R.id.btnStore);
         Button btnCredits = findViewById(R.id.btnCredits);
         ImageButton btnSetting = findViewById(R.id.btnSettings);
 
@@ -65,6 +66,16 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 //Open Credits
                 Intent in = new Intent(getApplicationContext(), MusicPlayerActivity.class);
+                musicPlayer.stopPlaying();
+                startActivity(in);
+            }
+        });
+
+        btnStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Open Credits
+                Intent in = new Intent(getApplicationContext(), StoreActivity.class);
                 musicPlayer.stopPlaying();
                 startActivity(in);
             }
