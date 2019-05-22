@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.thecoredepository.tangent.story.GenerateStory;
 import com.thecoredepository.tangent.PlayerData;
@@ -80,13 +81,22 @@ public class NewContinueActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //Load Last Game
-                saveData.loadData(getApplicationContext());
-                String playerName = saveData.playerName;
-                Intent in = new Intent(getApplicationContext(), GameActivity.class);
-                Log.d("PlayerData", "playerName = " + playerName);
-                GenerateStory.player.setPlayerName(playerName);
-                Log.d("startingActivity", "GameActivity.class");
-                startActivity(in);
+                boolean continueReady = false; //Don't use continue while it's bugged.
+
+                if (continueReady == true)
+                {
+                    saveData.loadData(getApplicationContext());
+                    String playerName = saveData.playerName;
+                    Intent in = new Intent(getApplicationContext(), GameActivity.class);
+                    Log.d("PlayerData", "playerName = " + playerName);
+                    GenerateStory.player.setPlayerName(playerName);
+                    Log.d("startingActivity", "GameActivity.class");
+                    startActivity(in);
+                }
+                else
+                {
+                    Toast.makeText(NewContinueActivity.this, "Continue is Under Development", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
