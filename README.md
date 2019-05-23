@@ -56,7 +56,7 @@ See also the list of [contributors](https://github.com/Geoffery10/Tangent/blob/m
 ## License
 
 **LINCENSE NOT COMPLETE**
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
