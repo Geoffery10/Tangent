@@ -150,10 +150,10 @@ public class GenerateStory
         sound = -1;
         charName = player.getPlayerName();
         speechText = "Off to the Bureau of Employment... again...";
-        continueTrue = false;
+        continueTrue = true;
         optionA = "";
         optionB = "";
-        leftChild = "";
+        leftChild = "5_5";
         rightChild = "";
         StoryObject story4_1 = new StoryObject();
         storyArray.add(story4_1 = new StoryObject(key, background, forground, music, sound,
@@ -207,7 +207,22 @@ public class GenerateStory
         StoryObject story5_2 = new StoryObject();
         storyArray.add(story5_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
-				
+
+        key = "5_5";
+        background = -1; //Office building
+        forground = -1; //N/A
+        music = -2; //Less omunse but not super peppy
+        sound = -1;
+        charName = "Unemployment Agent Aila";
+        speechText = "So what type of job are you looking to get?";
+        continueTrue =false ;
+        optionA = "Big corporation";
+        optionB = "Small business";
+        leftChild = "6_5";
+        rightChild = "6_6";
+        StoryObject story5_5 = new StoryObject();
+        storyArray.add(story5_5 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 
 		//=============================STAGE 06==================================
 		key = "6_2";
@@ -241,6 +256,38 @@ public class GenerateStory
         StoryObject story6_3 = new StoryObject();
         storyArray.add(story6_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "6_5";
+        background = -1; //Office building
+        forground = -1; //N/A
+        music = -2; //Less omunse but not super peppy
+        sound = -1;
+        charName = "Unemployment Agent Aila";
+        speechText = "And do you know what company you would be interested in working for?";
+        continueTrue = false ;
+        optionA = ""; //"Venture industries (a company that designs and builds space crafts)";
+        optionB = ""; //"The Core Depository (a video game development company)";
+        leftChild = ""; //"7_3";
+        rightChild = ""; //"7_4";
+        StoryObject story6_5 = new StoryObject();
+        storyArray.add(story6_5 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "6_6";
+        background = -1; //Office building
+        forground = -1; //N/A
+        music = -2; //Less omunse but not super peppy
+        sound = -1;
+        charName = "Unemployment Agent Aila";
+        speechText = "Are there any businesses you are interested in?";
+        continueTrue = false;
+        optionA = "27 hours (a general store)";
+        optionB = "Sweet Hearts (a local bakery)";
+        leftChild = "7_5";
+        rightChild = "7_6";
+        StoryObject story6_6 = new StoryObject();
+        storyArray.add(story6_6 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 07==================================
 		key = "7_2";
@@ -257,6 +304,22 @@ public class GenerateStory
         rightChild = "";
         StoryObject story7_2 = new StoryObject();
         storyArray.add(story7_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "7_5";
+        background = 3;
+        forground = -1;
+        music = 1 ;
+        sound = -1;
+        charName = "Mr. Blythe";
+        speechText = "Hello my name is Cedric Blythe but you can call me Cedric. Are you looking to work in sanitation or as a cashier?";
+        continueTrue = false ;
+        optionA = "Sanitation (janitor)";
+        optionB = "Cashier";
+        leftChild = "8_3";
+        rightChild = "8_4";
+        StoryObject story7_5 = new StoryObject();
+        storyArray.add(story7_5 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 08==================================
@@ -275,6 +338,22 @@ public class GenerateStory
         StoryObject story8_2 = new StoryObject();
         storyArray.add(story8_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "8_4";
+        background = 3;
+        forground = -1;
+        music = -1 ;
+        sound = -1;
+        charName = "";
+        speechText = "You have been working at the 27 hours for a few weeks now and things have been going well Mr. Blythe seems to be a kind and honest man who treats his employees well. Most of the customers are nice though there have been a few crazies.";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "9_3";
+        rightChild = "";
+        StoryObject story8_4 = new StoryObject();
+        storyArray.add(story8_4 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 09==================================
 		key = "9_2";
@@ -291,6 +370,22 @@ public class GenerateStory
         rightChild = "";
         StoryObject story9_2 = new StoryObject();
         storyArray.add(story9_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "9_3";
+        background = 3 ;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = "Customer";
+        speechText = "Hello good morning (The customer gives you a nice smile and pays. As they are walking out you see that they let their walet)";
+        continueTrue = false;
+        optionA = "Call them back to return their wallet";
+        optionB = "Pocket the wallet";
+        leftChild = "10_3";
+        rightChild = "10_4";
+        StoryObject story9_3 = new StoryObject();
+        storyArray.add(story9_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 10==================================
@@ -309,6 +404,38 @@ public class GenerateStory
         StoryObject story10_2 = new StoryObject();
         storyArray.add(story10_2 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "10_3";
+        background = 3 ;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = player.getPlayerName();
+        speechText = "Wait you forgot your wallet!";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "11_3";
+        rightChild = "";
+        StoryObject story10_3 = new StoryObject();
+        storyArray.add(story10_3 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "10_4";
+        background = 3 ;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = "";
+        speechText = "You sneakily pocket the wallet planning on going through it later";
+        continueTrue = true;
+        optionA = "";
+        optionB = "";
+        leftChild = "11_4";
+        rightChild = "";
+        StoryObject story10_4 = new StoryObject();
+        storyArray.add(story10_4 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 11==================================
 		key = "11_2";
@@ -325,6 +452,22 @@ public class GenerateStory
         rightChild = "";
         StoryObject story11_2 = new StoryObject();
         storyArray.add(story11_2 = new StoryObject(key, background, forground, music, sound,
+                charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
+
+        key = "11_3";
+        background = 3 ;
+        forground = -1;
+        music = -1;
+        sound = -1;
+        charName = "";
+        speechText = "The customer hears you just before they leave and quickly comes back over (is the customer a girl or a boy)";
+        continueTrue = false;
+        optionA = ""; //"Girl";
+        optionB = ""; //"Boy";
+        leftChild = ""; //"12_3";
+        rightChild = ""; //"12_4";
+        StoryObject story11_3 = new StoryObject();
+        storyArray.add(story11_3 = new StoryObject(key, background, forground, music, sound,
                 charName, speechText, continueTrue, optionA, optionB, leftChild, rightChild));
 		
 		//=============================STAGE 12==================================
