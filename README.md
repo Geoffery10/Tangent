@@ -1,4 +1,4 @@
 # Tangent
 
-Tangent is an Android Chose Your Own Adventure Story Game.
+Tangent is an Android Choose Your Own Adventure Story Game.
 This game is being developed by The Core Depository team.
