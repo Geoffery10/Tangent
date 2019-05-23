@@ -6,7 +6,7 @@ This game is being developed by The Core Depository team.
 ## Getting Started
 
 To download Tangent go to the release section or download Tangent on the Play Store (Not Available).
-###### [Releases](https://github.com/Geoffery10/Tangent/releases)
+* [Releases](https://github.com/Geoffery10/Tangent/releases)
 
 ### Prerequisites
 
@@ -29,7 +29,7 @@ Installing can be done by downloading from the Play Store (Not Available)
 
 Installing can be done by downloading the Tangent.apk from the latest release to your Android device. Once the download is complete you can open the APK on your device. Follow the install process on your device to complete the install. 
 
-###### [Releases](https://github.com/Geoffery10/Tangent/releases)
+* [Releases](https://github.com/Geoffery10/Tangent/releases)
 
 ##### Reasons your install failed: 
 
