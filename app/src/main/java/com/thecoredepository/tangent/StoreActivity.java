@@ -5,6 +5,7 @@ package com.thecoredepository.tangent;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,6 +27,7 @@ public class StoreActivity extends AppCompatActivity
 
         musicPlayer.setApplicationContext(getApplicationContext());
 
+        ImageButton btnRedbubble = findViewById(R.id.btnRedBubble);
         ImageButton btnBack = findViewById(R.id.btnBack2);
 
 
@@ -36,6 +38,17 @@ public class StoreActivity extends AppCompatActivity
         animStarField = (AnimationDrawable) storeScrollView.getBackground();
         animStarField.start();
 
+        btnRedbubble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicPlayer.stopPlaying();
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.redbubble.com/people/geoffery10/collections/1116624-the-core-depository"));
+                startActivity(intent);
+            }
+        });
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +68,7 @@ public class StoreActivity extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUI();
-            musicPlayer.startPlaying(R.raw.intro, false, false);
+            musicPlayer.startPlaying(R.raw.intro, true, false);
         }
         else
         {
