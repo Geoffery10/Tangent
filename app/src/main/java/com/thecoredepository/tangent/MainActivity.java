@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
         btnStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Open Credits
+                //Open Store
                 Intent in = new Intent(getApplicationContext(), StoreActivity.class);
                 musicPlayer.stopPlaying();
                 startActivity(in);

@@ -4,10 +4,12 @@ package com.thecoredepository.tangent;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 
 import com.thecoredepository.tangent.musicplayer.MusicPlayer;
 
@@ -19,21 +21,21 @@ public class StoreActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credits);
+        setContentView(R.layout.activity_store);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         musicPlayer.setApplicationContext(getApplicationContext());
 
         ImageButton btnBack = findViewById(R.id.btnBack2);
 
-        /*
+
         //StarField Animation
         AnimationDrawable animStarField;
         ScrollView storeScrollView = findViewById(R.id.storeScroll);
         storeScrollView.setBackgroundResource(R.drawable.starfield);
         animStarField = (AnimationDrawable) storeScrollView.getBackground();
         animStarField.start();
-        */
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
