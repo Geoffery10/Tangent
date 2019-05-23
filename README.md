@@ -16,6 +16,7 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 ```
 Samsung Galaxy S8
 Samsung Galaxy S9+
+Xiaomi Mi A2 Lite
 ```
 
 ### Installing
