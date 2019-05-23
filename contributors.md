@@ -26,3 +26,7 @@
 * Wesley Powell
 * Laura Smith
 * Waylon Smith
+
+## Interested in Joining the Team?
+
+Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)! 
