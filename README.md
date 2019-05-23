@@ -32,10 +32,10 @@ Installing can be done by downloading the Tangent.apk from the latest release to
 
 * [Releases](https://github.com/Geoffery10/Tangent/releases)
 
-##### Reasons your install failed: 
+#### Reasons your install failed: 
 
-Unknown sources (Disabled)
-  [Guide to Enabling Unknown sources](https://www.cnet.com/how-to/how-to-install-apps-outside-of-google-play/)
+* Unknown sources (Disabled)
+  * [Guide to Enabling Unknown sources](https://www.cnet.com/how-to/how-to-install-apps-outside-of-google-play/)
 
 ## Built With
 
