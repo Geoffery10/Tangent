@@ -61,5 +61,5 @@ See also the list of [contributors](https://github.com/Geoffery10/Tangent/blob/m
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
-* Inspiration (Choose Your Own Adventure Stories and Dungeon of the Endless)
+* Inspiration (Choose Your Own Adventure Stories and [Dungeon of the Endless](https://store.steampowered.com/app/249050/Dungeon_of_the_Endless/))
 * etc
