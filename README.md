@@ -16,6 +16,7 @@ This app requires at least Android 4.0.3 (Ice Cream Sandwich).
 ```
 Samsung Galaxy S8
 Samsung Galaxy S9+
+Xiaomi Mi A2 Lite
 ```
 
 ### Installing
@@ -31,10 +32,10 @@ Installing can be done by downloading the Tangent.apk from the latest release to
 
 * [Releases](https://github.com/Geoffery10/Tangent/releases)
 
-##### Reasons your install failed: 
+#### Reasons your install failed: 
 
-Unknown sources (Disabled)
-  [Guide to Enabling Unknown sources](https://www.cnet.com/how-to/how-to-install-apps-outside-of-google-play/)
+* Unknown sources (Disabled)
+  * [Guide to Enabling Unknown sources](https://www.cnet.com/how-to/how-to-install-apps-outside-of-google-play/)
 
 ## Built With
 
@@ -49,7 +50,7 @@ Interested in contributing? Join our [Discord](https://discord.gg/yh7E5S3)!
 
 * **Geoffery Powell - [Geoffery10](https://github.com/Geoffery10)** - *Team Lead, Developer, and Graphic Designer* 
 * **Connor Davey - [CD33](https://github.com/connordavey33)** - *Graphic Designer, Music Composer, Story Manager* 
-* **Isacc Swiney - Acnor** - *Lead Writer* 
+* **Isaac Swiney - Acnor** - *Lead Writer* 
 
 See also the list of [contributors](https://github.com/Geoffery10/Tangent/blob/master/contributors.md) who participated in this project.
 

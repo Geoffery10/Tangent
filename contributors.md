@@ -6,7 +6,7 @@
 
 * **Geoffery Powell - [Geoffery10](https://github.com/Geoffery10)** - *Director, Developer, and Graphic Designer* 
 * **Connor Davey - [CD33](https://github.com/connordavey33)** - *Graphic Designer, Music Composer, Story Manager* 
-* **Isacc Swiney - Acnor** - *Lead Writer* 
+* **Isaac Swiney - Acnor** - *Lead Writer* 
 * **Anna Powell - ShadowCat** - *Writer* 
 
 #### Testers 
