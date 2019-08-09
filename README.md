@@ -24,9 +24,9 @@ Xiaomi Mi A2 Lite
 ### Installing
 
 #### Play Store
-
+![Play Store](https://github.com/Geoffery10/Tangent/blob/master/githubData/images/github-playstore.png?raw=true)
 Installing can be done by downloading from the Play Store (Not Available)
-##### Link: (Not Available)
+* Link: (Not Available)
   
 #### GitHub Release 
 
