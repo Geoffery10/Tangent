@@ -1,4 +1,4 @@
-![Banner](https://thecoredepository.weebly.com/uploads/1/2/5/9/125965379/background-images/831017451.jpg)
+![Banner](https://github.com/Geoffery10/Tangent/blob/master/githubData/images/github-banner.png?raw=true)
 # Tangent
 
 Tangent is an Android Choose Your Own Adventure Story Game.
