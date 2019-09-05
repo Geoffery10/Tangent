@@ -6,11 +6,11 @@ package com.thecoredepository.tangent.story;
 
 public class PlayerObject
 {
-    private String playerName;
+    private String playerName; //Player's Name
     private String lastKeyLocation; //Used in saving
     private String race; //Might not be used
     private int age; //Might not be used
-    private String gender;
+    private String gender; //Might not be used
 
     PlayerObject()
     {

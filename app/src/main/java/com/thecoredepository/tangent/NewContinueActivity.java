@@ -1,5 +1,7 @@
 package com.thecoredepository.tangent;
 
+//This menu is allows players to choose a NEW GAME or CONTINUE GAME.
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;

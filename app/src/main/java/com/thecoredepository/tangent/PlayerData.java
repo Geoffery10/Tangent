@@ -21,8 +21,8 @@ public class PlayerData
 
     //Properties for Tangent 1
 
-    String lastKey;
-    String playerName;
+    String lastKey; //Current Location
+    String playerName; //Player's Name
 
     public void playerData()
     {

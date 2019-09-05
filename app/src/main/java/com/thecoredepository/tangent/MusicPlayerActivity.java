@@ -1,5 +1,7 @@
 package com.thecoredepository.tangent;
 
+//The Music Player Activity is for playing music from the game.
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
