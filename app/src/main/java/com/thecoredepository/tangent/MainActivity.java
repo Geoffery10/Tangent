@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     // Shows the system bars by removing all the flags
-// except for the ones that make the content appear under the system bars.
+    // except for the ones that make the content appear under the system bars.
     private void showSystemUI() {
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

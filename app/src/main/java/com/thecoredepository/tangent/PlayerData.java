@@ -1,20 +1,18 @@
 package com.thecoredepository.tangent;
 
 //This class is used to save and load the player's data.
-//It will be useful for saving the player characteristics
+//It is useful for saving the player characteristics
 //and saving progress through the story.
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import static android.content.Context.MODE_PRIVATE;
+import java.util.prefs.PreferenceChangeEvent;
 
 import com.thecoredepository.tangent.story.PlayerObject;
 import com.thecoredepository.tangent.story.GenerateStory;
-
-import java.util.prefs.PreferenceChangeEvent;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class PlayerData
 {
